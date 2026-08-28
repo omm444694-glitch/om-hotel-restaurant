@@ -18,7 +18,7 @@ html{
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   color:#29231d;
   background:#fffdf8;
   line-height:1.6;
@@ -121,6 +121,8 @@ a{
   text-transform:uppercase;
   font-weight:bold;
   transition:.3s;
+  border:0;
+  cursor:pointer;
 }
 
 .btn:hover{
@@ -428,6 +430,41 @@ section{
   letter-spacing:1px;
 }
 
+/* CONTACT BUTTONS */
+
+.contact-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.contact-buttons a{
+  display:inline-block;
+  padding:14px 20px;
+  font-size:12px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-weight:bold;
+  color:white;
+  background:#bd8b43;
+  transition:.3s;
+}
+
+.contact-buttons a:hover{
+  transform:translateY(-3px);
+}
+
+.contact-buttons .whatsapp{
+  background:#25D366;
+}
+
+.contact-buttons .maps{
+  background:#444;
+}
+
+/* FORM */
+
 .formbox{
   background:#f6f1e8;
   padding:32px;
@@ -535,6 +572,14 @@ footer{
     grid-template-columns:1fr;
   }
 
+  .contact-buttons{
+    flex-direction:column;
+  }
+
+  .contact-buttons a{
+    text-align:center;
+  }
+
   footer{
     flex-direction:column;
     gap:15px;
@@ -546,10 +591,7 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav class="nav">
-
   <div class="logo">
     SAIN <span>DASS</span>
   </div>
@@ -561,13 +603,9 @@ footer{
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </div>
-
 </nav>
 
-<!-- HERO -->
-
 <header class="hero">
-
   <div class="hero-content">
 
 ```
@@ -591,10 +629,7 @@ footer{
 ```
 
   </div>
-
 </header>
-
-<!-- BOOKING BAR -->
 
 <div class="bookingbar">
 
@@ -619,8 +654,6 @@ footer{
   </div>
 
 </div>
-
-<!-- ABOUT -->
 
 <section>
 
@@ -679,8 +712,6 @@ footer{
 </div>
 
 </section>
-
-<!-- ROOMS -->
 
 <section class="rooms" id="rooms">
 
@@ -785,8 +816,6 @@ style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89
 
 </section>
 
-<!-- DINING -->
-
 <section id="dining">
 
 <div class="head">
@@ -848,8 +877,6 @@ style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89
 
 </section>
 
-<!-- EVENTS -->
-
 <section class="events" id="events">
 
 <div class="event-grid">
@@ -908,8 +935,6 @@ style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89
 
 </section>
 
-<!-- GALLERY -->
-
 <section id="gallery">
 
 <div class="head">
@@ -950,8 +975,6 @@ style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89
 
 </section>
 
-<!-- REVIEW -->
-
 <section class="review">
 
 <blockquote>
@@ -963,8 +986,6 @@ SAIN DASS · KANPUR
 </small>
 
 </section>
-
-<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -1005,6 +1026,28 @@ SAIN DASS · KANPUR
   <small>Events</small>
   <b>Parties & Functions</b>
 </div>
+```
+
+  </div>
+
+  <div class="contact-buttons">
+
+```
+<a href="tel:+917880592979">
+  📞 Call Now
+</a>
+
+<a class="whatsapp"
+   href="https://wa.me/917880592979?text=Hello%20Sain%20Dass%2C%20I%20want%20to%20make%20an%20enquiry."
+   target="_blank">
+  💬 WhatsApp
+</a>
+
+<a class="maps"
+   href="https://www.google.com/maps/search/?api=1&query=Kaushalpuri%2C%20Kanpur"
+   target="_blank">
+  📍 Google Maps
+</a>
 ```
 
   </div>
@@ -1056,8 +1099,6 @@ SAIN DASS · KANPUR
 </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
