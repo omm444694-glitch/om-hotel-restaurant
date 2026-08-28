@@ -1,895 +1,1071 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Om Hotel & Restaurant, Pukhrayan - Kanpur Jhansi Highway">
-<title>Om Hotel & Restaurant | Pukhrayan</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Sain Dass | Hotel & Celebrations</title>
 
 <style>
-:root{
-  --gold:#c9a45c;
-  --gold2:#e5c47b;
-  --black:#0b0b0b;
-  --dark:#111;
-  --cream:#f7f3eb;
-  --white:#fff;
-  --gray:#a5a5a5;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:"DM Sans",sans-serif;
-  background:var(--cream);
-  color:#222;
+html{
+  scroll-behavior:smooth;
 }
-a{text-decoration:none;color:inherit}
-img{width:100%;display:block}
-.container{width:min(1200px,90%);margin:auto}
+
+body{
+  font-family:Arial, sans-serif;
+  color:#29231d;
+  background:#fffdf8;
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  font-family:Georgia,serif;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
 /* NAVBAR */
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
-  transition:.4s;
-}
-header.scrolled{
-  background:rgba(8,8,8,.96);
-  backdrop-filter:blur(15px);
-}
+
 .nav{
-  height:90px;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10;
+  padding:22px 7%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-.logo{
   color:white;
-  display:flex;
-  align-items:center;
-  gap:12px;
+  border-bottom:1px solid #ffffff35;
 }
-.logo-mark{
-  width:48px;height:48px;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  color:var(--gold2);
-  font-size:23px;
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:25px;
+  letter-spacing:4px;
 }
-.logo b{
-  font-family:"Cormorant Garamond",serif;
-  font-size:27px;
+
+.logo span{
+  color:#e4b96f;
 }
-.logo small{
-  display:block;
-  letter-spacing:3px;
-  font-size:8px;
-  color:#bbb;
-}
-nav{
+
+.links{
   display:flex;
   gap:30px;
-  align-items:center;
+  font-size:14px;
 }
-nav a{
-  color:#fff;
-  font-size:13px;
-  letter-spacing:.5px;
-}
-nav a:hover{color:var(--gold2)}
-.nav-call{
-  padding:12px 21px;
-  border:1px solid var(--gold);
-  color:var(--gold2)!important;
-}
-.menu-btn{
-  display:none;
-  color:white;
-  background:none;
-  border:0;
-  font-size:28px;
+
+.links a:hover{
+  color:#e4b96f;
 }
 
 /* HERO */
+
 .hero{
-  min-height:100vh;
-  position:relative;
+  min-height:90vh;
   display:flex;
+  justify-content:center;
   align-items:center;
-  background:
-   linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.42)),
-   url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=90")
-   center/cover;
+  text-align:center;
   color:white;
+  padding:100px 20px;
+  background:
+  linear-gradient(#0008,#0004),
+  url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1900&q=85")
+  center/cover;
 }
+
 .hero-content{
-  max-width:800px;
-  padding-top:70px;
+  max-width:850px;
 }
-.kicker{
-  color:var(--gold2);
-  letter-spacing:5px;
-  text-transform:uppercase;
+
+.eyebrow{
+  color:#edc889;
   font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
   margin-bottom:20px;
 }
+
 .hero h1{
-  font-family:"Cormorant Garamond",serif;
-  font-size:clamp(65px,9vw,120px);
-  line-height:.82;
-  font-weight:600;
-  margin-bottom:30px;
+  font-size:clamp(55px,8vw,100px);
+  line-height:1.05;
+  margin-bottom:22px;
 }
-.hero h1 span{color:var(--gold2)}
+
 .hero p{
-  max-width:650px;
-  color:#ddd;
+  max-width:620px;
+  margin:auto;
   font-size:17px;
-  line-height:1.8;
-  margin-bottom:35px;
+  color:#eee;
+  margin-bottom:32px;
 }
-.buttons{display:flex;gap:14px;flex-wrap:wrap}
+
 .btn{
-  padding:15px 28px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-size:13px;
-  font-weight:700;
+  display:inline-block;
+  background:#bd8b43;
+  color:white;
+  padding:15px 27px;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:bold;
   transition:.3s;
 }
-.btn-gold{
-  background:var(--gold);
-  color:#111;
-}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-3px)}
-.btn-light{
-  border:1px solid rgba(255,255,255,.5);
-  color:white;
-}
-.btn-light:hover{background:white;color:#111}
 
-.hero-bottom{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  border-top:1px solid rgba(255,255,255,.2);
+.btn:hover{
+  transform:translateY(-3px);
 }
-.hero-stats{
+
+/* BOOKING BAR */
+
+.bookingbar{
+  margin:-40px 7% 0;
+  position:relative;
+  z-index:3;
+  background:#f6f1e8;
   display:grid;
   grid-template-columns:repeat(4,1fr);
+  box-shadow:0 15px 40px #0002;
 }
-.hero-stat{
-  padding:18px 10px;
-  border-right:1px solid rgba(255,255,255,.15);
+
+.bookingbar div{
+  padding:22px;
+  border-right:1px solid #ddd5c8;
+}
+
+.bookingbar small{
+  display:block;
+  color:#777;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.bookingbar strong{
+  font-size:14px;
+}
+
+/* COMMON */
+
+section{
+  padding:100px 7%;
+}
+
+.kicker{
+  color:#bd8b43;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.head{
+  max-width:700px;
+  margin:0 auto 50px;
   text-align:center;
 }
-.hero-stat strong{display:block;color:white}
-.hero-stat span{font-size:11px;color:#aaa}
 
-/* INTRO */
-.intro{
-  padding:120px 0;
-  background:var(--cream);
+.head h2{
+  font-size:55px;
+  margin-bottom:15px;
 }
-.intro-grid{
+
+.head p{
+  color:#777;
+}
+
+/* ABOUT */
+
+.about{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:80px;
+  gap:70px;
   align-items:center;
 }
-.image-frame{position:relative}
-.image-frame img{
-  height:600px;
-  object-fit:cover;
-}
-.image-frame:after{
-  content:"";
-  position:absolute;
-  inset:20px -20px -20px 20px;
-  border:1px solid var(--gold);
-  z-index:0;
-}
-.image-frame img{position:relative;z-index:1}
-.intro-text .kicker{color:#9d7933}
-.intro-text h2,
-.section-title h2{
-  font-family:"Cormorant Garamond",serif;
-  font-size:65px;
-  line-height:.95;
-  font-weight:600;
-  color:#171717;
-  margin-bottom:25px;
-}
-.intro-text p{
-  color:#666;
-  line-height:1.9;
-  margin-bottom:18px;
-}
-.gold-line{
-  width:70px;
-  height:1px;
-  background:var(--gold);
-  margin:25px 0;
+
+.about-img{
+  height:560px;
+  background:
+  url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85")
+  center/cover;
 }
 
-/* EXPERIENCE */
-.experience{
-  background:#101010;
-  color:white;
-  padding:100px 0;
+.about-copy h2{
+  font-size:55px;
 }
-.section-title{text-align:center;margin-bottom:60px}
-.section-title .kicker{color:var(--gold2)}
-.section-title h2{color:white}
-.section-title p{
-  max-width:650px;
-  margin:auto;
-  color:#999;
-  line-height:1.8;
+
+.about-copy p{
+  color:#777;
+  margin:20px 0;
 }
+
+.stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:28px 0;
+}
+
+.stat{
+  padding:20px;
+  border:1px solid #ddd5c8;
+  background:#fff;
+}
+
+.stat b{
+  display:block;
+  font-family:Georgia,serif;
+  font-size:25px;
+  color:#bd8b43;
+}
+
+/* ROOMS */
+
+.rooms{
+  background:#f6f1e8;
+}
+
 .cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:25px;
+  gap:22px;
 }
+
 .card{
-  background:#171717;
-  border:1px solid #292929;
+  background:white;
+  border:1px solid #ddd5c8;
   overflow:hidden;
-  transition:.4s;
 }
-.card:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
+
+.pic{
+  height:250px;
+  background-size:cover;
+  background-position:center;
 }
-.card img{height:270px;object-fit:cover}
-.card-content{padding:28px}
-.card-content h3{
-  font-family:"Cormorant Garamond",serif;
-  font-size:32px;
+
+.card-body{
+  padding:25px;
+}
+
+.card h3{
+  font-size:28px;
   margin-bottom:8px;
 }
-.card-content p{color:#999;line-height:1.7;font-size:14px}
 
-/* MENU */
-.menu{
-  padding:120px 0;
-  background:#fff;
-}
-.menu-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
-.menu-item{
-  display:grid;
-  grid-template-columns:150px 1fr;
-  gap:22px;
-  padding-bottom:25px;
-  border-bottom:1px solid #ddd;
-}
-.menu-item img{
-  height:130px;
-  object-fit:cover;
-}
-.menu-item h3{
-  font-family:"Cormorant Garamond",serif;
-  font-size:29px;
-  margin-bottom:5px;
-}
-.menu-item p{
+.card p{
   color:#777;
-  font-size:13px;
-  line-height:1.6;
+  font-size:14px;
 }
+
+.meta{
+  border-top:1px solid #ddd5c8;
+  margin-top:18px;
+  padding-top:15px;
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+}
+
 .price{
-  color:#9d7933;
+  color:#bd8b43;
   font-weight:bold;
-  margin-top:9px;
 }
 
-/* GALLERY */
-.gallery{
-  padding:120px 0;
-  background:#f1ede4;
-}
-.gallery-grid{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
-  grid-template-rows:280px 280px;
-  gap:12px;
-}
-.gallery-box{
-  overflow:hidden;
-}
-.gallery-box:first-child{grid-row:span 2}
-.gallery-box img{
-  height:100%;
-  object-fit:cover;
-  transition:.6s;
-}
-.gallery-box:hover img{transform:scale(1.06)}
+/* DINING */
 
-/* REVIEWS */
-.reviews{
-  padding:110px 0;
-  background:#fff;
-}
-.rating{
-  text-align:center;
-  margin-bottom:50px;
-}
-.rating-number{
-  font-family:"Cormorant Garamond",serif;
-  font-size:90px;
-  line-height:.8;
-}
-.stars{color:#c89f4c;letter-spacing:5px;font-size:20px}
-.rating small{color:#777}
-.review-grid{
+.services{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
-.review{
-  padding:30px;
-  background:#f7f5f0;
-  border-left:2px solid var(--gold);
-}
-.review p{
-  color:#555;
-  line-height:1.8;
-  font-size:14px;
-  margin:18px 0;
-}
-.review strong{font-size:13px}
 
-/* CONTACT */
-.contact{
-  background:#0c0c0c;
+.service{
+  min-height:370px;
+  padding:30px;
+  display:flex;
+  align-items:flex-end;
   color:white;
-  padding:110px 0;
+  position:relative;
+  background-size:cover;
+  background-position:center;
 }
-.contact-grid{
+
+.service:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent,#000c);
+}
+
+.service div{
+  position:relative;
+  z-index:1;
+}
+
+.service h3{
+  font-size:35px;
+}
+
+/* EVENTS */
+
+.events{
+  background:#17130f;
+  color:white;
+}
+
+.event-grid{
   display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:30px;
+  grid-template-columns:1.2fr .8fr;
+  gap:50px;
+  align-items:center;
 }
-.contact-info{
-  padding:45px;
-  border:1px solid #292929;
+
+.event-img{
+  min-height:520px;
+  background:
+  url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85")
+  center/cover;
 }
-.contact-info h2{
-  font-family:"Cormorant Garamond",serif;
+
+.events h2{
   font-size:55px;
-  margin-bottom:30px;
 }
-.contact-row{
+
+.events p{
+  color:#ccc;
+  margin:20px 0;
+}
+
+.event-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
   margin:25px 0;
 }
-.contact-row small{
-  color:var(--gold2);
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-.contact-row p{
-  color:#bbb;
-  margin-top:5px;
-}
-.map iframe{
-  width:100%;
-  height:100%;
-  min-height:480px;
-  border:0;
+
+.event-list div{
+  border:1px solid #ffffff30;
+  padding:16px;
 }
 
-/* CTA */
-.cta{
-  padding:110px 20px;
-  text-align:center;
-  color:white;
-  background:
-   linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
-   url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2000&q=90")
-   center/cover fixed;
-}
-.cta h2{
-  font-family:"Cormorant Garamond",serif;
-  font-size:75px;
-  margin-bottom:15px;
-}
-.cta p{color:#ccc;margin-bottom:28px}
+/* GALLERY */
 
-/* FOOTER */
-footer{
-  background:#060606;
-  color:#888;
-  padding:55px 0 25px;
-}
-.footer{
+.gallery{
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
-  gap:50px;
-  padding-bottom:35px;
-  border-bottom:1px solid #222;
+  grid-auto-rows:220px;
+  gap:12px;
 }
-.footer h3{
-  color:white;
-  font-family:"Cormorant Garamond",serif;
-  font-size:30px;
-  margin-bottom:15px;
-}
-.footer a{
-  display:block;
-  margin:8px 0;
-  font-size:13px;
-}
-.footer a:hover{color:var(--gold)}
-.copy{text-align:center;padding-top:25px;font-size:12px}
 
-/* FLOATING */
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25d366;
-  color:white;
+.gallery div{
+  background-size:cover;
+  background-position:center;
+}
+
+.gallery .big{
+  grid-row:span 2;
+}
+
+/* REVIEW */
+
+.review{
+  background:#f6f1e8;
+  text-align:center;
+}
+
+.review blockquote{
+  font-family:Georgia,serif;
+  font-size:40px;
+  max-width:850px;
+  margin:auto;
+}
+
+/* CONTACT */
+
+.contact{
   display:grid;
-  place-items:center;
-  font-size:27px;
-  z-index:1200;
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  grid-template-columns:1fr 1fr;
+  gap:70px;
 }
-.top{
-  position:fixed;
-  right:25px;
-  bottom:92px;
-  width:42px;height:42px;
-  border:1px solid var(--gold);
-  background:#111;
-  color:var(--gold);
+
+.contact h2{
+  font-size:55px;
+}
+
+.contact p{
+  color:#777;
+  margin:20px 0;
+}
+
+.details{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.details div{
+  background:#f6f1e8;
+  padding:18px;
+}
+
+.details small{
+  display:block;
+  color:#bd8b43;
+  text-transform:uppercase;
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.formbox{
+  background:#f6f1e8;
+  padding:32px;
+}
+
+.formbox h3{
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.form input,
+.form select,
+.form textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd5c8;
+  background:white;
+  font:inherit;
+}
+
+.form textarea{
+  grid-column:1/-1;
+  min-height:110px;
+}
+
+.form button{
+  border:0;
   cursor:pointer;
-  opacity:0;
-  pointer-events:none;
-  transition:.3s;
-  z-index:1100;
 }
-.top.show{opacity:1;pointer-events:auto}
+
+/* FOOTER */
+
+footer{
+  background:#100e0c;
+  color:#ddd;
+  padding:35px 7%;
+  display:flex;
+  justify-content:space-between;
+}
 
 /* MOBILE */
+
 @media(max-width:850px){
-  nav{
-    position:absolute;
-    top:90px;
-    left:0;
-    right:0;
-    background:#0c0c0c;
+
+  .links{
     display:none;
-    flex-direction:column;
-    padding:20px 7%;
-    gap:18px;
   }
-  nav.active{display:flex}
-  .menu-btn{display:block}
-  .intro-grid,.contact-grid{grid-template-columns:1fr}
-  .cards,.review-grid{grid-template-columns:1fr}
-  .menu-grid{grid-template-columns:1fr}
-  .footer{grid-template-columns:1fr}
-  .hero-stats{grid-template-columns:1fr 1fr}
-  .hero-stat{border-bottom:1px solid rgba(255,255,255,.15)}
-  .image-frame img{height:420px}
-  .intro-text h2,.section-title h2{font-size:50px}
-  .gallery-grid{
+
+  .bookingbar{
     grid-template-columns:1fr 1fr;
-    grid-template-rows:220px 180px 180px;
   }
-  .gallery-box:first-child{
-    grid-column:span 2;
-    grid-row:auto;
+
+  .about,
+  .event-grid,
+  .contact{
+    grid-template-columns:1fr;
   }
-  .cta h2{font-size:52px}
+
+  .cards,
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .about-img{
+    height:400px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
-@media(max-width:500px){
-  .nav{height:75px}
-  nav{top:75px}
-  .hero h1{font-size:65px}
-  .hero p{font-size:14px}
-  .hero-bottom{display:none}
-  .intro,.menu,.gallery,.reviews,.contact{padding:80px 0}
-  .menu-item{grid-template-columns:100px 1fr}
-  .menu-item img{height:100px}
-  .menu-item h3{font-size:24px}
-  .contact-info{padding:28px}
-  .contact-info h2{font-size:45px}
+@media(max-width:520px){
+
+  section{
+    padding:70px 5%;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .bookingbar{
+    margin:0 5%;
+  }
+
+  .stats,
+  .details,
+  .form,
+  .event-list{
+    grid-template-columns:1fr;
+  }
+
+  .form textarea{
+    grid-column:auto;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  footer{
+    flex-direction:column;
+    gap:15px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header id="header">
-<div class="container nav">
+<!-- NAVBAR -->
 
-<a href="#home" class="logo">
-<div class="logo-mark">ॐ</div>
-<div>
-<b>Om Hotel</b>
-<small>& RESTAURANT</small>
-</div>
-</a>
+<nav class="nav">
 
-<button class="menu-btn" id="menuBtn">☰</button>
+  <div class="logo">
+    SAIN <span>DASS</span>
+  </div>
 
-<nav id="nav">
-<a href="#home">HOME</a>
-<a href="#about">ABOUT</a>
-<a href="#experience">EXPERIENCE</a>
-<a href="#menu">MENU</a>
-<a href="#gallery">GALLERY</a>
-<a href="#reviews">REVIEWS</a>
-<a href="#contact">CONTACT</a>
-<a class="nav-call" href="tel:09559085571">CALL NOW</a>
+  <div class="links">
+    <a href="#rooms">Rooms</a>
+    <a href="#dining">Dining</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+
 </nav>
 
-</div>
+
+<!-- HERO -->
+
+<header class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Hotel · Dining · Celebrations · Kanpur
+    </div>
+
+    <h1>
+      Stay with comfort.<br>
+      Celebrate with style.
+    </h1>
+
+    <p>
+      A polished hotel experience for restful stays,
+      memorable meals and intimate celebrations in Kanpur.
+    </p>
+
+    <a class="btn" href="#contact">
+      Enquire Now
+    </a>
+
+  </div>
+
 </header>
 
-<main>
 
-<section class="hero" id="home">
-<div class="container">
-<div class="hero-content">
+<!-- BOOKING BAR -->
 
-<div class="kicker">WELCOME TO OM HOTEL & RESTAURANT</div>
+<div class="bookingbar">
 
-<h1>
-Stay.<br>
-Dine.<br>
-<span>Enjoy.</span>
-</h1>
+  <div>
+    <small>Location</small>
+    <strong>Kaushalpuri, Kanpur</strong>
+  </div>
 
-<p>
-A welcoming destination for delicious food and memorable moments,
-located on the Kanpur–Jhansi Highway in Pukhrayan, Uttar Pradesh.
-</p>
+  <div>
+    <small>Rooms</small>
+    <strong>Comfortable Stays</strong>
+  </div>
 
-<div class="buttons">
-<a class="btn btn-gold" href="#menu">EXPLORE MENU</a>
-<a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Om+Hotel+%26+Restaurant+Pukhrayan+Uttar+Pradesh" target="_blank">GET DIRECTIONS</a>
+  <div>
+    <small>Dining</small>
+    <strong>SD Eats</strong>
+  </div>
+
+  <div>
+    <small>Events</small>
+    <strong>Celebrations</strong>
+  </div>
+
 </div>
 
-</div>
+
+<!-- ABOUT -->
+
+<section>
+
+<div class="about">
+
+  <div class="about-img"></div>
+
+  <div class="about-copy">
+
+    <div class="kicker">
+      Welcome to Sain Dass
+    </div>
+
+    <h2>
+      A comfortable base for the city.
+    </h2>
+
+    <p>
+      Designed as a warm, modern hotel experience,
+      this concept brings rooms, dining and celebrations
+      together in one easy-to-navigate digital home.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <b>24/7</b>
+        Front desk assistance
+      </div>
+
+      <div class="stat">
+        <b>Wi-Fi</b>
+        Stay connected
+      </div>
+
+      <div class="stat">
+        <b>Rooms</b>
+        Comfortable stays
+      </div>
+
+      <div class="stat">
+        <b>Events</b>
+        Parties & functions
+      </div>
+
+    </div>
+
+    <a class="btn" href="#rooms">
+      Explore Rooms
+    </a>
+
+  </div>
+
 </div>
 
-<div class="hero-bottom">
-<div class="container hero-stats">
-<div class="hero-stat"><strong>★ 4.0 / 5</strong><span>165 Google Reviews</span></div>
-<div class="hero-stat"><strong>24 HOURS</strong><span>Open Every Day</span></div>
-<div class="hero-stat"><strong>₹1–₹1,200</strong><span>Per Person</span></div>
-<div class="hero-stat"><strong>PUKHRAYAN</strong><span>Kanpur–Jhansi Highway</span></div>
-</div>
-</div>
 </section>
 
-<section class="intro" id="about">
-<div class="container intro-grid">
 
-<div class="image-frame">
-<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=90" alt="Om Hotel restaurant">
-</div>
+<!-- ROOMS -->
 
-<div class="intro-text">
-<div class="kicker">THE OM EXPERIENCE</div>
-<h2>A Place Made For Good Food & Good Moments</h2>
-<div class="gold-line"></div>
+<section class="rooms" id="rooms">
 
-<p>
-Welcome to <b>Om Hotel & Restaurant</b>, a convenient dining destination
-on the Kanpur–Jhansi Highway in Pukhrayan.
-</p>
+<div class="head">
 
-<p>
-Whether you're travelling through the highway, meeting family or simply
-looking for a satisfying meal, Om Hotel & Restaurant offers a comfortable
-place to stop, dine and relax.
-</p>
+  <div class="kicker">
+    Rooms
+  </div>
 
-<div class="buttons">
-<a class="btn btn-gold" href="tel:09559085571">CALL 095590 85571</a>
-</div>
-</div>
+  <h2>
+    Rest easy after a day in Kanpur.
+  </h2>
+
+  <p>
+    Comfortable room choices with the information
+    guests actually need.
+  </p>
 
 </div>
-</section>
 
-<section class="experience" id="experience">
-<div class="container">
-
-<div class="section-title">
-<div class="kicker">WHY OM HOTEL</div>
-<h2>An Experience Worth Stopping For</h2>
-<p>Comfort, convenience and food come together for travellers and guests.</p>
-</div>
 
 <div class="cards">
 
-<article class="card">
-<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=90" alt="Dining">
-<div class="card-content">
-<h3>Dine In</h3>
-<p>Relax and enjoy your meal in a comfortable dining environment.</p>
-</div>
-</article>
+  <article class="card">
 
-<article class="card">
-<img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1000&q=90" alt="Food">
-<div class="card-content">
-<h3>Good Food</h3>
-<p>Enjoy popular Indian dishes, pizza and comforting favourites.</p>
-</div>
-</article>
+    <div class="pic"
+    style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85')">
+    </div>
 
-<article class="card">
-<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=90" alt="Pizza">
-<div class="card-content">
-<h3>Highway Stop</h3>
-<p>Conveniently located for travellers on the Kanpur–Jhansi Highway.</p>
-</div>
-</article>
+    <div class="card-body">
+
+      <h3>Standard Room</h3>
+
+      <p>
+        Air-conditioned room with comfortable bedding,
+        bathroom and Wi-Fi.
+      </p>
+
+      <div class="meta">
+        <span>2–3 guests</span>
+        <span class="price">Check Rate</span>
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <article class="card">
+
+    <div class="pic"
+    style="background-image:url('https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=900&q=85')">
+    </div>
+
+    <div class="card-body">
+
+      <h3>Deluxe Stay</h3>
+
+      <p>
+        A polished stay concept with comfortable
+        bedding and workspace.
+      </p>
+
+      <div class="meta">
+        <span>2 guests</span>
+        <span class="price">Check Rate</span>
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <article class="card">
+
+    <div class="pic"
+    style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=85')">
+    </div>
+
+    <div class="card-body">
+
+      <h3>Executive Stay</h3>
+
+      <p>
+        Extra comfort for business trips,
+        longer visits and special occasions.
+      </p>
+
+      <div class="meta">
+        <span>2 guests</span>
+        <span class="price">Check Rate</span>
+      </div>
+
+    </div>
+
+  </article>
 
 </div>
-</div>
+
 </section>
 
-<section class="menu" id="menu">
-<div class="container">
 
-<div class="section-title">
-<div class="kicker">OUR MENU</div>
-<h2>Favourites From The Kitchen</h2>
-<p>A showcase of popular food categories. Add your actual menu and prices later.</p>
-</div>
+<!-- DINING -->
 
-<div class="menu-grid">
+<section id="dining">
 
-<div class="menu-item">
-<img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=90" alt="Pizza">
-<div>
-<h3>Pizza</h3>
-<p>Hot, delicious and perfect for sharing.</p>
-<div class="price">Popular Choice</div>
-</div>
-</div>
+<div class="head">
 
-<div class="menu-item">
-<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=90" alt="Indian cuisine">
-<div>
-<h3>Indian Cuisine</h3>
-<p>Comforting Indian flavours for every appetite.</p>
-<div class="price">Chef Favourite</div>
-</div>
-</div>
+  <div class="kicker">
+    Dining
+  </div>
 
-<div class="menu-item">
-<img src="https://images.unsplash.com/photo-1626500155537-93690c24099b?auto=format&fit=crop&w=600&q=90" alt="Daal Tadka">
-<div>
-<h3>Daal Tadka</h3>
-<p>A classic Indian favourite with rich flavours.</p>
-<div class="price">Classic</div>
-</div>
-</div>
+  <h2>
+    Something delicious, right downstairs.
+  </h2>
 
-<div class="menu-item">
-<img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=90" alt="Food">
-<div>
-<h3>Food & Drinks</h3>
-<p>Explore more choices when you visit us.</p>
-<div class="price">Explore</div>
-</div>
-</div>
+  <p>
+    A restaurant experience for breakfast,
+    lunch, dinner and relaxed evenings.
+  </p>
 
 </div>
+
+
+<div class="services">
+
+  <div class="service"
+  style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85')">
+
+    <div>
+      <h3>SD Eats</h3>
+      <p>All-day dining and a relaxed restaurant atmosphere.</p>
+    </div>
+
+  </div>
+
+
+  <div class="service"
+  style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=85')">
+
+    <div>
+      <h3>North Indian</h3>
+      <p>Comforting classics and delicious meals.</p>
+    </div>
+
+  </div>
+
+
+  <div class="service"
+  style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=85')">
+
+    <div>
+      <h3>Evenings</h3>
+      <p>Good food and a comfortable atmosphere.</p>
+    </div>
+
+  </div>
+
 </div>
+
 </section>
 
-<section class="gallery" id="gallery">
-<div class="container">
 
-<div class="section-title">
-<div class="kicker">GALLERY</div>
-<h2>A Glimpse Of Om</h2>
-<p>Replace these images with your own restaurant photographs for an even more authentic website.</p>
+<!-- EVENTS -->
+
+<section class="events" id="events">
+
+<div class="event-grid">
+
+  <div class="event-img"></div>
+
+  <div>
+
+    <div class="kicker">
+      Events & Celebrations
+    </div>
+
+    <h2>
+      Make the occasion feel special.
+    </h2>
+
+    <p>
+      A dedicated section for birthdays,
+      weddings, corporate events and family
+      get-togethers.
+    </p>
+
+    <div class="event-list">
+
+      <div>
+        <b>Birthdays</b>
+        Small celebrations
+      </div>
+
+      <div>
+        <b>Weddings</b>
+        Intimate functions
+      </div>
+
+      <div>
+        <b>Corporate</b>
+        Meetings & events
+      </div>
+
+      <div>
+        <b>Get-togethers</b>
+        Family occasions
+      </div>
+
+    </div>
+
+    <a class="btn" href="#contact">
+      Plan An Event
+    </a>
+
+  </div>
+
 </div>
 
-<div class="gallery-grid">
-<div class="gallery-box">
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=90" alt="Restaurant">
-</div>
-<div class="gallery-box">
-<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=90" alt="Restaurant interior">
-</div>
-<div class="gallery-box">
-<img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=900&q=90" alt="Food">
-</div>
-<div class="gallery-box">
-<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=90" alt="Pizza">
-</div>
-<div class="gallery-box">
-<img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=90" alt="Indian food">
-</div>
-</div>
-
-</div>
 </section>
 
-<section class="reviews" id="reviews">
-<div class="container">
 
-<div class="section-title">
-<div class="kicker">GUEST REVIEWS</div>
-<h2>What Guests Say</h2>
-</div>
+<!-- GALLERY -->
 
-<div class="rating">
-<div class="rating-number">4.0</div>
-<div class="stars">★★★★★</div>
-<small>Based on 165 Google reviews</small>
-</div>
+<section id="gallery">
 
-<div class="review-grid">
+<div class="head">
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Ambience is good. The food was great and the dosa was crispy and tasty."</p>
-<strong>— Shankarappa A</strong>
-</div>
+  <div class="kicker">
+    Gallery
+  </div>
 
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Food was good, staff behaviour and hospitality is good."</p>
-<strong>— Guest Review</strong>
-</div>
-
-<div class="review">
-<div class="stars">★★★★☆</div>
-<p>"Parking space is available and the location is right on the highway."</p>
-<strong>— Guest Review</strong>
-</div>
+  <h2>
+    See the stay before you arrive.
+  </h2>
 
 </div>
+
+
+<div class="gallery">
+
+  <div class="big"
+  style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85')">
+  </div>
+
+  <div
+  style="background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85')">
+  </div>
+
+  <div
+  style="background-image:url('https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=85')">
+  </div>
+
+  <div
+  style="background-image:url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=85')">
+  </div>
+
+  <div
+  style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85')">
+  </div>
+
 </div>
+
 </section>
+
+
+<!-- REVIEW -->
+
+<section class="review">
+
+<blockquote>
+“Stay comfortable. Create memories.”
+</blockquote>
+
+<small>
+SAIN DASS · KANPUR
+</small>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
-<div class="container">
 
-<div class="section-title">
-<div class="kicker">VISIT US</div>
-<h2>Find Om Hotel & Restaurant</h2>
-<p>We're ready to welcome you in Pukhrayan.</p>
+<div>
+
+  <div class="kicker">
+    Contact & Enquiry
+  </div>
+
+  <h2>
+    Let's plan your stay.
+  </h2>
+
+  <p>
+    Send an enquiry for rooms, dining
+    or events.
+  </p>
+
+  <div class="details">
+
+    <div>
+      <small>Phone</small>
+      <b>+91 78805 92979</b>
+    </div>
+
+    <div>
+      <small>Address</small>
+      <b>Kaushalpuri, Kanpur</b>
+    </div>
+
+    <div>
+      <small>Dining</small>
+      <b>SD Eats</b>
+    </div>
+
+    <div>
+      <small>Events</small>
+      <b>Parties & Functions</b>
+    </div>
+
+  </div>
+
 </div>
 
-<div class="contact-grid">
 
-<div class="contact-info">
-<h2>Let's Meet</h2>
+<div class="formbox">
 
-<div class="contact-row">
-<small>ADDRESS</small>
-<p>6R6G+R86, Kanpur–Jhansi Highway, Pukhrayan, Uttar Pradesh 209111</p>
+  <h3>
+    Send an Enquiry
+  </h3>
+
+  <form class="form"
+  onsubmit="event.preventDefault();alert('Demo enquiry submitted!');">
+
+    <input
+      required
+      placeholder="Your name">
+
+    <input
+      required
+      type="tel"
+      placeholder="Phone number">
+
+    <select>
+
+      <option>Room Enquiry</option>
+      <option>Dining</option>
+      <option>Birthday / Party</option>
+      <option>Wedding</option>
+      <option>Corporate Event</option>
+
+    </select>
+
+    <input type="date">
+
+    <textarea
+      placeholder="Tell us what you need...">
+    </textarea>
+
+    <button class="btn" type="submit">
+      Send Enquiry
+    </button>
+
+  </form>
+
 </div>
 
-<div class="contact-row">
-<small>PHONE</small>
-<p>095590 85571</p>
-</div>
-
-<div class="contact-row">
-<small>OPENING HOURS</small>
-<p>Open 24 Hours</p>
-</div>
-
-<div class="buttons">
-<a class="btn btn-gold" href="tel:09559085571">CALL NOW</a>
-<a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Om+Hotel+%26+Restaurant+Pukhrayan+Uttar+Pradesh" target="_blank">DIRECTIONS</a>
-</div>
-</div>
-
-<div class="map">
-<iframe src="https://www.google.com/maps?q=Om+Hotel+%26+Restaurant,+Pukhrayan,+Uttar+Pradesh&output=embed" loading="lazy" allowfullscreen></iframe>
-</div>
-
-</div>
-</div>
 </section>
 
-<section class="cta">
-<h2>Your Next Stop Is Here.</h2>
-<p>Good food. Comfortable moments. Om Hotel & Restaurant, Pukhrayan.</p>
-<a class="btn btn-gold" href="tel:09559085571">CALL 095590 85571</a>
-</section>
 
-</main>
+<!-- FOOTER -->
 
 <footer>
-<div class="container">
 
-<div class="footer">
-<div>
-<h3>Om Hotel & Restaurant</h3>
-<p>A dining destination on the Kanpur–Jhansi Highway, Pukhrayan, Uttar Pradesh.</p>
-</div>
+  <div class="logo">
+    SAIN <span>DASS</span>
+  </div>
 
-<div>
-<h3>Explore</h3>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#menu">Menu</a>
-<a href="#gallery">Gallery</a>
-</div>
+  <small>
+    © 2026 Hotel Website Demo
+  </small>
 
-<div>
-<h3>Contact</h3>
-<a href="tel:09559085571">📞 095590 85571</a>
-<a href="#contact">📍 Pukhrayan, UP</a>
-<a href="#contact">🕐 Open 24 Hours</a>
-</div>
-</div>
-
-<div class="copy">
-© <span id="year"></span> Om Hotel & Restaurant. All rights reserved.
-</div>
-
-</div>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/919559085571" target="_blank" aria-label="WhatsApp">◉</a>
-<button class="top" id="top">↑</button>
-
-<script>
-const header=document.getElementById("header");
-const menuBtn=document.getElementById("menuBtn");
-const nav=document.getElementById("nav");
-const top=document.getElementById("top");
-
-window.addEventListener("scroll",()=>{
-  header.classList.toggle("scrolled",window.scrollY>40);
-  top.classList.toggle("show",window.scrollY>500);
-});
-
-menuBtn.addEventListener("click",()=>{
-  nav.classList.toggle("active");
-  menuBtn.textContent=nav.classList.contains("active")?"✕":"☰";
-});
-
-document.querySelectorAll("nav a").forEach(a=>{
-  a.addEventListener("click",()=>{
-    nav.classList.remove("active");
-    menuBtn.textContent="☰";
-  });
-});
-
-top.addEventListener("click",()=>{
-  window.scrollTo({top:0,behavior:"smooth"});
-});
-
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
 
 </body>
 </html>
+```
