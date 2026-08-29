@@ -1,1116 +1,1624 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sain Dass | Hotel & Celebrations</title>
+
+<title>Shoaib Makeup Studio & Academy | Lucknow</title>
+
+<meta name="description" content="Shoaib Makeup Studio & Academy in Aliganj, Lucknow. Professional makeup, hair styling and beauty services with academy courses.">
+<meta name="keywords" content="Shoaib Makeup Studio, Makeup Academy Lucknow, Salon Aliganj, Hairdresser Lucknow, Makeup Artist Lucknow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+
+:root{
+    --gold:#d6b36a;
+    --gold2:#f2d18b;
+    --black:#080808;
+    --dark:#101010;
+    --dark2:#161616;
+    --cream:#f7f1e6;
+    --muted:#aaa;
+    --white:#fff;
+    --border:rgba(214,179,106,.22);
 }
 
-html{
-  scroll-behavior:smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  color:#29231d;
-  background:#fffdf8;
-  line-height:1.6;
-}
-
-h1,h2,h3{
-  font-family:Georgia,serif;
+    font-family:"DM Sans",sans-serif;
+    background:var(--black);
+    color:var(--white);
+    overflow-x:hidden;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
 }
 
 /* NAVBAR */
 
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    transition:.35s;
+}
+
+header.scrolled{
+    background:rgba(8,8,8,.92);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border);
+}
+
 .nav{
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  z-index:10;
-  padding:22px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  color:white;
-  border-bottom:1px solid #ffffff35;
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-  font-family:Georgia,serif;
-  font-size:25px;
-  letter-spacing:4px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
 }
 
 .logo span{
-  color:#e4b96f;
+    color:var(--gold);
 }
 
-.links{
-  display:flex;
-  gap:30px;
-  font-size:14px;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
-.links a:hover{
-  color:#e4b96f;
+.nav-links a{
+    color:#ddd;
+    font-size:14px;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-btn{
+    padding:12px 20px;
+    border:1px solid var(--gold);
+    color:var(--gold)!important;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-  min-height:90vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-  padding:100px 20px;
-  background:
-  linear-gradient(#0008,#0004),
-  url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1900&q=85")
-  center/cover;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 75% 30%,rgba(214,179,106,.15),transparent 30%),
+    linear-gradient(120deg,#080808 45%,#17130c);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(8,8,8,.98) 15%,rgba(8,8,8,.72) 55%,rgba(8,8,8,.2));
+    pointer-events:none;
 }
 
 .hero-content{
-  max-width:850px;
+    position:relative;
+    z-index:2;
+    max-width:750px;
+    padding-top:80px;
 }
 
-.eyebrow{
-  color:#edc889;
-  font-size:12px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  margin-bottom:20px;
+.small-title{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:20px;
 }
 
 .hero h1{
-  font-size:clamp(55px,8vw,100px);
-  line-height:1.05;
-  margin-bottom:22px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(58px,8vw,100px);
+    line-height:.9;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--gold);
 }
 
 .hero p{
-  max-width:620px;
-  margin:auto;
-  font-size:17px;
-  color:#eee;
-  margin-bottom:32px;
+    max-width:570px;
+    color:#c4c4c4;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    margin-top:35px;
+    flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-block;
-  background:#bd8b43;
-  color:white;
-  padding:15px 27px;
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-weight:bold;
-  transition:.3s;
-  border:0;
-  cursor:pointer;
+    padding:15px 25px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
+.btn-gold{
+    background:var(--gold);
+    color:#080808;
 }
 
-/* BOOKING BAR */
-
-.bookingbar{
-  margin:-40px 7% 0;
-  position:relative;
-  z-index:3;
-  background:#f6f1e8;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  box-shadow:0 15px 40px #0002;
+.btn-gold:hover{
+    background:var(--gold2);
+    transform:translateY(-3px);
 }
 
-.bookingbar div{
-  padding:22px;
-  border-right:1px solid #ddd5c8;
+.btn-outline{
+    border:1px solid rgba(255,255,255,.35);
+    color:white;
 }
 
-.bookingbar small{
-  display:block;
-  color:#777;
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:1px;
+.btn-outline:hover{
+    border-color:var(--gold);
+    color:var(--gold);
 }
 
-.bookingbar strong{
-  font-size:14px;
+.rating{
+    margin-top:42px;
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-/* COMMON */
+.stars{
+    color:var(--gold);
+    letter-spacing:3px;
+}
+
+.rating strong{
+    font-size:22px;
+}
+
+.rating span{
+    color:#999;
+    font-size:13px;
+}
+
+/* SECTIONS */
 
 section{
-  padding:100px 7%;
+    padding:100px 0;
 }
 
-.kicker{
-  color:#bd8b43;
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:11px;
-  font-weight:bold;
-  margin-bottom:12px;
+.section-head{
+    margin-bottom:50px;
 }
 
-.head{
-  max-width:700px;
-  margin:0 auto 50px;
-  text-align:center;
+.section-head.center{
+    text-align:center;
 }
 
-.head h2{
-  font-size:55px;
-  margin-bottom:15px;
+.section-label{
+    color:var(--gold);
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:12px;
 }
 
-.head p{
-  color:#777;
+.section-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(42px,5vw,65px);
+    line-height:1;
+}
+
+.section-desc{
+    color:#999;
+    max-width:600px;
+    line-height:1.8;
+    margin-top:15px;
 }
 
 /* ABOUT */
 
 .about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
+    background:#0d0d0d;
 }
 
-.about-img{
-  height:560px;
-  background:
-  url("https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=85")
-  center/cover;
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
 }
 
-.about-copy h2{
-  font-size:55px;
+.about-image{
+    min-height:540px;
+    position:relative;
+    overflow:hidden;
 }
 
-.about-copy p{
-  color:#777;
-  margin:20px 0;
+.about-image img{
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.75);
 }
 
-.stats{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin:28px 0;
+.about-image::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border:1px solid var(--gold);
+    pointer-events:none;
 }
 
-.stat{
-  padding:20px;
-  border:1px solid #ddd5c8;
-  background:#fff;
+.about-content p{
+    color:#aaa;
+    line-height:1.9;
+    margin:22px 0;
 }
 
-.stat b{
-  display:block;
-  font-family:Georgia,serif;
-  font-size:25px;
-  color:#bd8b43;
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:30px;
 }
 
-/* ROOMS */
-
-.rooms{
-  background:#f6f1e8;
+.feature{
+    padding:20px;
+    border:1px solid var(--border);
+    background:#121212;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+.feature strong{
+    display:block;
+    color:var(--gold);
+    margin-bottom:6px;
 }
 
-.card{
-  background:white;
-  border:1px solid #ddd5c8;
-  overflow:hidden;
+.feature span{
+    color:#aaa;
+    font-size:13px;
 }
 
-.pic{
-  height:250px;
-  background-size:cover;
-  background-position:center;
-}
-
-.card-body{
-  padding:25px;
-}
-
-.card h3{
-  font-size:28px;
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#777;
-  font-size:14px;
-}
-
-.meta{
-  border-top:1px solid #ddd5c8;
-  margin-top:18px;
-  padding-top:15px;
-  display:flex;
-  justify-content:space-between;
-  font-size:12px;
-}
-
-.price{
-  color:#bd8b43;
-  font-weight:bold;
-}
-
-/* DINING */
+/* SERVICES */
 
 .services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+    background:#080808;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
 .service{
-  min-height:370px;
-  padding:30px;
-  display:flex;
-  align-items:flex-end;
-  color:white;
-  position:relative;
-  background-size:cover;
-  background-position:center;
+    padding:35px 28px;
+    border:1px solid #222;
+    background:linear-gradient(145deg,#121212,#0b0b0b);
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
 }
 
-.service:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent,#000c);
+.service:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
 }
 
-.service div{
-  position:relative;
-  z-index:1;
+.service-number{
+    color:#444;
+    font-size:13px;
+    margin-bottom:35px;
+}
+
+.service-icon{
+    font-size:34px;
+    margin-bottom:18px;
 }
 
 .service h3{
-  font-size:35px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+    margin-bottom:10px;
 }
 
-/* EVENTS */
-
-.events{
-  background:#17130f;
-  color:white;
+.service p{
+    color:#999;
+    font-size:14px;
+    line-height:1.7;
 }
 
-.event-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:50px;
-  align-items:center;
+/* ACADEMY */
+
+.academy{
+    background:
+    linear-gradient(rgba(10,10,10,.9),rgba(10,10,10,.96)),
+    url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1800&q=85");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
-.event-img{
-  min-height:520px;
-  background:
-  url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85")
-  center/cover;
+.academy-box{
+    max-width:760px;
 }
 
-.events h2{
-  font-size:55px;
+.academy-box p{
+    color:#bbb;
+    line-height:1.9;
+    margin:20px 0 30px;
 }
 
-.events p{
-  color:#ccc;
-  margin:20px 0;
+.course-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
 }
 
-.event-list{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin:25px 0;
-}
-
-.event-list div{
-  border:1px solid #ffffff30;
-  padding:16px;
+.course{
+    border:1px solid var(--border);
+    padding:12px 17px;
+    color:#ddd;
+    font-size:13px;
 }
 
 /* GALLERY */
 
 .gallery{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  grid-auto-rows:220px;
-  gap:12px;
+    background:#0d0d0d;
 }
 
-.gallery div{
-  background-size:cover;
-  background-position:center;
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-auto-rows:240px;
+    gap:12px;
 }
 
-.gallery .big{
-  grid-row:span 2;
+.gallery-item{
+    overflow:hidden;
+    position:relative;
+    background:#161616;
 }
 
-/* REVIEW */
+.gallery-item:first-child{
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.gallery-item:nth-child(4){
+    grid-column:span 2;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* REVIEWS */
+
+.reviews{
+    background:#080808;
+}
+
+.review-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:45px;
+    gap:20px;
+}
+
+.rating-big{
+    text-align:right;
+}
+
+.rating-big strong{
+    display:block;
+    font-size:50px;
+    font-family:"Cormorant Garamond",serif;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
 
 .review{
-  background:#f6f1e8;
-  text-align:center;
+    padding:28px;
+    background:#111;
+    border:1px solid #222;
 }
 
-.review blockquote{
-  font-family:Georgia,serif;
-  font-size:40px;
-  max-width:850px;
-  margin:auto;
+.review-stars{
+    color:var(--gold);
+    margin-bottom:18px;
 }
 
-/* CONTACT */
-
-.contact{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
+.review p{
+    color:#bbb;
+    line-height:1.8;
+    font-size:14px;
+    min-height:75px;
 }
 
-.contact h2{
-  font-size:55px;
+.reviewer{
+    border-top:1px solid #252525;
+    margin-top:22px;
+    padding-top:18px;
 }
 
-.contact p{
-  color:#777;
-  margin:20px 0;
+.reviewer strong{
+    display:block;
 }
 
-.details{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
+.reviewer span{
+    color:#777;
+    font-size:12px;
 }
 
-.details div{
-  background:#f6f1e8;
-  padding:18px;
+/* LOCATION */
+
+.location{
+    background:#0d0d0d;
 }
 
-.details small{
-  display:block;
-  color:#bd8b43;
-  text-transform:uppercase;
-  font-size:10px;
-  letter-spacing:1px;
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
-/* CONTACT BUTTONS */
-
-.contact-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:25px;
+.location-card{
+    border:1px solid #252525;
+    padding:35px;
+    background:#111;
 }
 
-.contact-buttons a{
-  display:inline-block;
-  padding:14px 20px;
-  font-size:12px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  font-weight:bold;
-  color:white;
-  background:#bd8b43;
-  transition:.3s;
+.location-card h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+    margin-bottom:18px;
 }
 
-.contact-buttons a:hover{
-  transform:translateY(-3px);
+.location-card p{
+    color:#999;
+    line-height:1.8;
 }
 
-.contact-buttons .whatsapp{
-  background:#25D366;
+.map{
+    min-height:300px;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1524666041070-9f4b5e3f7b3f?auto=format&fit=crop&w=1200&q=80");
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
-.contact-buttons .maps{
-  background:#444;
+/* CTA */
+
+.cta{
+    padding:90px 0;
+    text-align:center;
+    background:linear-gradient(135deg,#16120b,#0a0a0a);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
 }
 
-/* FORM */
-
-.formbox{
-  background:#f6f1e8;
-  padding:32px;
+.cta h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(45px,6vw,75px);
+    margin-bottom:15px;
 }
 
-.formbox h3{
-  font-size:30px;
-  margin-bottom:20px;
-}
-
-.form{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:13px;
-}
-
-.form input,
-.form select,
-.form textarea{
-  width:100%;
-  padding:14px;
-  border:1px solid #ddd5c8;
-  background:white;
-  font:inherit;
-}
-
-.form textarea{
-  grid-column:1/-1;
-  min-height:110px;
-}
-
-.form button{
-  border:0;
-  cursor:pointer;
+.cta p{
+    color:#999;
+    margin-bottom:30px;
 }
 
 /* FOOTER */
 
 footer{
-  background:#100e0c;
-  color:#ddd;
-  padding:35px 7%;
-  display:flex;
-  justify-content:space-between;
+    background:#050505;
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:40px;
+}
+
+.footer-brand p{
+    color:#777;
+    max-width:400px;
+    line-height:1.8;
+    margin-top:15px;
+}
+
+.footer h4{
+    color:var(--gold);
+    margin-bottom:18px;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.footer a,
+.footer p{
+    display:block;
+    color:#888;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.copyright{
+    border-top:1px solid #1b1b1b;
+    padding-top:22px;
+    color:#555;
+    font-size:12px;
+    text-align:center;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.78);
+    backdrop-filter:blur(8px);
+    z-index:2000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:min(550px,100%);
+    background:#111;
+    border:1px solid var(--border);
+    padding:35px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:26px;
+    cursor:pointer;
+    color:#aaa;
+}
+
+.modal h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    color:#888;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:14px;
+    background:#090909;
+    border:1px solid #292929;
+    color:white;
+    outline:none;
+    font-family:inherit;
+}
+
+.form-group textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:var(--gold);
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
 }
 
 /* MOBILE */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
-  .links{
-    display:none;
-  }
+    .nav-links{
+        position:absolute;
+        top:82px;
+        left:0;
+        width:100%;
+        background:#090909;
+        border-top:1px solid #222;
+        flex-direction:column;
+        padding:25px;
+        display:none;
+    }
 
-  .bookingbar{
-    grid-template-columns:1fr 1fr;
-  }
+    .nav-links.active{
+        display:flex;
+    }
 
-  .about,
-  .event-grid,
-  .contact{
-    grid-template-columns:1fr;
-  }
+    .menu{
+        display:block;
+    }
 
-  .cards,
-  .services{
-    grid-template-columns:1fr;
-  }
+    .hero{
+        min-height:90vh;
+    }
 
-  .about-img{
-    height:400px;
-  }
+    .about-grid,
+    .location-grid{
+        grid-template-columns:1fr;
+    }
 
-  .gallery{
-    grid-template-columns:1fr 1fr;
-  }
+    .about-image{
+        min-height:420px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
-@media(max-width:520px){
+@media(max-width:600px){
 
-  section{
-    padding:70px 5%;
-  }
+    section{
+        padding:75px 0;
+    }
 
-  .hero h1{
-    font-size:50px;
-  }
+    .hero h1{
+        font-size:60px;
+    }
 
-  .bookingbar{
-    margin:0 5%;
-  }
+    .hero p{
+        font-size:15px;
+    }
 
-  .stats,
-  .details,
-  .form,
-  .event-list{
-    grid-template-columns:1fr;
-  }
+    .service-grid,
+    .review-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
 
-  .form textarea{
-    grid-column:auto;
-  }
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:170px;
+    }
 
-  .gallery{
-    grid-template-columns:1fr;
-  }
+    .gallery-item:first-child{
+        grid-column:span 2;
+        grid-row:span 1;
+    }
 
-  .contact-buttons{
-    flex-direction:column;
-  }
+    .gallery-item:nth-child(4){
+        grid-column:span 1;
+    }
 
-  .contact-buttons a{
-    text-align:center;
-  }
+    .review-top{
+        align-items:start;
+        flex-direction:column;
+    }
 
-  footer{
-    flex-direction:column;
-    gap:15px;
-  }
+    .rating-big{
+        text-align:left;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        min-height:350px;
+    }
+
+    .modal-box{
+        padding:25px 20px;
+    }
 }
+
 </style>
-
 </head>
 
 <body>
 
-<nav class="nav">
-  <div class="logo">
-    SAIN <span>DASS</span>
-  </div>
+<header id="header">
+<div class="container nav">
 
-  <div class="links">
-    <a href="#rooms">Rooms</a>
-    <a href="#dining">Dining</a>
-    <a href="#events">Events</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </div>
+<a href="#home" class="logo">
+Shoaib <span>Studio</span>
+</a>
+
+<nav class="nav-links" id="navLinks">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#academy">Academy</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#location">Contact</a>
+<a href="#" class="nav-btn" onclick="openModal();return false;">Book Appointment</a>
 </nav>
 
-<header class="hero">
-  <div class="hero-content">
+<div class="menu" onclick="toggleMenu()">☰</div>
 
-```
-<div class="eyebrow">
-  Hotel · Dining · Celebrations · Kanpur
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content reveal">
+
+<div class="small-title">
+Makeup Studio • Hair • Academy
 </div>
 
 <h1>
-  Stay with comfort.<br>
-  Celebrate with style.
+Your Style.<br>
+Your <span>Signature.</span>
 </h1>
 
 <p>
-  A polished hotel experience for restful stays,
-  memorable meals and intimate celebrations in Kanpur.
+Welcome to Shoaib Makeup Studio & Academy — where professional styling,
+modern grooming and makeup artistry come together to create your perfect look.
 </p>
 
-<a class="btn" href="#contact">
-  Enquire Now
+<div class="hero-buttons">
+
+<a href="#services" class="btn btn-gold">
+Explore Services →
 </a>
-```
 
-  </div>
-</header>
-
-<div class="bookingbar">
-
-  <div>
-    <small>Location</small>
-    <strong>Kaushalpuri, Kanpur</strong>
-  </div>
-
-  <div>
-    <small>Rooms</small>
-    <strong>Comfortable Stays</strong>
-  </div>
-
-  <div>
-    <small>Dining</small>
-    <strong>SD Eats</strong>
-  </div>
-
-  <div>
-    <small>Events</small>
-    <strong>Celebrations</strong>
-  </div>
+<a href="#" onclick="openModal();return false;" class="btn btn-outline">
+Book Appointment
+</a>
 
 </div>
 
-<section>
+<div class="rating">
 
-<div class="about">
+<div class="stars">★★★★★</div>
 
-  <div class="about-img"></div>
-
-  <div class="about-copy">
-
-```
-<div class="kicker">
-  Welcome to Sain Dass
+<div>
+<strong>4.9</strong>
+<span> / 5 · 30 Reviews</span>
 </div>
 
-<h2>
-  A comfortable base for the city.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-image reveal">
+
+<img
+src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85"
+alt="Professional salon"
+>
+
+</div>
+
+<div class="about-content reveal">
+
+<div class="section-label">About The Studio</div>
+
+<h2 class="section-title">
+Where Style Meets<br>
+<span style="color:var(--gold)">Confidence.</span>
 </h2>
 
 <p>
-  Designed as a warm, modern hotel experience,
-  this concept brings rooms, dining and celebrations
-  together in one easy-to-navigate digital home.
+Shoaib Makeup Studio & Academy is a professional beauty and styling
+destination in Aliganj, Lucknow. We focus on quality service,
+modern styling and a comfortable experience for every client.
 </p>
 
-<div class="stats">
+<p>
+From precision haircuts and styling to makeup and professional
+training, our goal is simple — make every visit worth remembering.
+</p>
 
-  <div class="stat">
-    <b>24/7</b>
-    Front desk assistance
-  </div>
+<div class="features">
 
-  <div class="stat">
-    <b>Wi-Fi</b>
-    Stay connected
-  </div>
+<div class="feature">
+<strong>4.9★ Rating</strong>
+<span>30+ customer reviews</span>
+</div>
 
-  <div class="stat">
-    <b>Rooms</b>
-    Comfortable stays
-  </div>
+<div class="feature">
+<strong>Professional</strong>
+<span>Experienced styling service</span>
+</div>
 
-  <div class="stat">
-    <b>Events</b>
-    Parties & functions
-  </div>
+<div class="feature">
+<strong>Affordable</strong>
+<span>Quality at reasonable prices</span>
+</div>
+
+<div class="feature">
+<strong>Academy</strong>
+<span>Learn professional skills</span>
+</div>
 
 </div>
 
-<a class="btn" href="#rooms">
-  Explore Rooms
-</a>
-```
-
-  </div>
-
 </div>
-
-</section>
-
-<section class="rooms" id="rooms">
-
-<div class="head">
-
-  <div class="kicker">
-    Rooms
-  </div>
-
-  <h2>
-    Rest easy after a day in Kanpur.
-  </h2>
-
-  <p>
-    Comfortable room choices with the information
-    guests actually need.
-  </p>
-
-</div>
-
-<div class="cards">
-
-  <article class="card">
-
-```
-<div class="pic"
-style="background-image:url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85')">
-</div>
-
-<div class="card-body">
-
-  <h3>Standard Room</h3>
-
-  <p>
-    Air-conditioned room with comfortable bedding,
-    bathroom and Wi-Fi.
-  </p>
-
-  <div class="meta">
-    <span>2–3 guests</span>
-    <span class="price">Check Rate</span>
-  </div>
-
-</div>
-```
-
-  </article>
-
-  <article class="card">
-
-```
-<div class="pic"
-style="background-image:url('https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=900&q=85')">
-</div>
-
-<div class="card-body">
-
-  <h3>Deluxe Stay</h3>
-
-  <p>
-    A polished stay concept with comfortable
-    bedding and workspace.
-  </p>
-
-  <div class="meta">
-    <span>2 guests</span>
-    <span class="price">Check Rate</span>
-  </div>
-
-</div>
-```
-
-  </article>
-
-  <article class="card">
-
-```
-<div class="pic"
-style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=85')">
-</div>
-
-<div class="card-body">
-
-  <h3>Executive Stay</h3>
-
-  <p>
-    Extra comfort for business trips,
-    longer visits and special occasions.
-  </p>
-
-  <div class="meta">
-    <span>2 guests</span>
-    <span class="price">Check Rate</span>
-  </div>
-
-</div>
-```
-
-  </article>
 
 </div>
 
 </section>
 
-<section id="dining">
 
-<div class="head">
+<!-- SERVICES -->
 
-  <div class="kicker">
-    Dining
-  </div>
+<section class="services" id="services">
 
-  <h2>
-    Something delicious, right downstairs.
-  </h2>
+<div class="container">
 
-  <p>
-    A restaurant experience for breakfast,
-    lunch, dinner and relaxed evenings.
-  </p>
+<div class="section-head center reveal">
+
+<div class="section-label">Our Services</div>
+
+<h2 class="section-title">
+Premium Care.<br>
+Exceptional <span style="color:var(--gold)">Style.</span>
+</h2>
+
+<p class="section-desc" style="margin-left:auto;margin-right:auto;">
+Professional beauty and grooming services designed around your personal style.
+</p>
 
 </div>
 
-<div class="services">
 
-  <div class="service"
-  style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85')">
+<div class="service-grid">
 
-```
-<div>
-  <h3>SD Eats</h3>
-  <p>All-day dining and a relaxed restaurant atmosphere.</p>
+<div class="service reveal">
+<div class="service-number">01</div>
+<div class="service-icon">✂️</div>
+<h3>Haircut & Styling</h3>
+<p>Modern haircuts, styling and finishing for a clean and confident look.</p>
 </div>
-```
 
-  </div>
-
-  <div class="service"
-  style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=85')">
-
-```
-<div>
-  <h3>North Indian</h3>
-  <p>Comforting classics and delicious meals.</p>
+<div class="service reveal">
+<div class="service-number">02</div>
+<div class="service-icon">💄</div>
+<h3>Makeup</h3>
+<p>Professional makeup services for special occasions and memorable moments.</p>
 </div>
-```
 
-  </div>
-
-  <div class="service"
-  style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=85')">
-
-```
-<div>
-  <h3>Evenings</h3>
-  <p>Good food and a comfortable atmosphere.</p>
+<div class="service reveal">
+<div class="service-number">03</div>
+<div class="service-icon">✨</div>
+<h3>Hair Styling</h3>
+<p>Contemporary styling tailored to your face, outfit and occasion.</p>
 </div>
-```
 
-  </div>
+<div class="service reveal">
+<div class="service-number">04</div>
+<div class="service-icon">🧴</div>
+<h3>Grooming</h3>
+<p>Complete grooming and finishing services with attention to detail.</p>
+</div>
+
+<div class="service reveal">
+<div class="service-number">05</div>
+<div class="service-icon">👰</div>
+<h3>Bridal & Events</h3>
+<p>Event-ready makeup and styling designed for your important occasions.</p>
+</div>
+
+<div class="service reveal">
+<div class="service-number">06</div>
+<div class="service-icon">🎓</div>
+<h3>Academy Training</h3>
+<p>Learn practical makeup and beauty skills through professional training.</p>
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="events" id="events">
 
-<div class="event-grid">
+<!-- ACADEMY -->
 
-  <div class="event-img"></div>
+<section class="academy" id="academy">
 
-  <div>
+<div class="container">
 
-```
-<div class="kicker">
-  Events & Celebrations
-</div>
+<div class="academy-box reveal">
 
-<h2>
-  Make the occasion feel special.
+<div class="section-label">Shoaib Academy</div>
+
+<h2 class="section-title">
+Turn Your Passion<br>
+Into a <span style="color:var(--gold)">Profession.</span>
 </h2>
 
 <p>
-  A dedicated section for birthdays,
-  weddings, corporate events and family
-  get-togethers.
+Our academy is designed for students who want to develop practical
+skills in makeup, hair styling and professional salon techniques.
+Learn, practice and build confidence under professional guidance.
 </p>
 
-<div class="event-list">
+<div class="course-list">
 
-  <div>
-    <b>Birthdays</b>
-    Small celebrations
-  </div>
-
-  <div>
-    <b>Weddings</b>
-    Intimate functions
-  </div>
-
-  <div>
-    <b>Corporate</b>
-    Meetings & events
-  </div>
-
-  <div>
-    <b>Get-togethers</b>
-    Family occasions
-  </div>
+<div class="course">Professional Makeup</div>
+<div class="course">Hair Styling</div>
+<div class="course">Bridal Makeup</div>
+<div class="course">Salon Grooming</div>
+<div class="course">Beauty Techniques</div>
 
 </div>
 
-<a class="btn" href="#contact">
-  Plan An Event
+<a href="#" onclick="openModal();return false;" class="btn btn-gold">
+Enquire About Courses →
 </a>
-```
 
-  </div>
+</div>
 
 </div>
 
 </section>
 
-<section id="gallery">
 
-<div class="head">
+<!-- GALLERY -->
 
-  <div class="kicker">
-    Gallery
-  </div>
+<section class="gallery" id="gallery">
 
-  <h2>
-    See the stay before you arrive.
-  </h2>
+<div class="container">
+
+<div class="section-head center reveal">
+
+<div class="section-label">Our Work</div>
+
+<h2 class="section-title">
+Style In <span style="color:var(--gold)">Every Detail.</span>
+</h2>
 
 </div>
 
-<div class="gallery">
+<div class="gallery-grid">
 
-  <div class="big"
-  style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85')">
-  </div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Makeup studio">
+</div>
 
-  <div
-  style="background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85')">
-  </div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=85" alt="Hair styling">
+</div>
 
-  <div
-  style="background-image:url('https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=85')">
-  </div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=800&q=85" alt="Makeup">
+</div>
 
-  <div
-  style="background-image:url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=85')">
-  </div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=900&q=85" alt="Beauty">
+</div>
 
-  <div
-  style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85')">
-  </div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=85" alt="Beauty styling">
+</div>
+
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=85" alt="Salon">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+<div class="container">
+
+<div class="review-top reveal">
+
+<div>
+<div class="section-label">Client Reviews</div>
+<h2 class="section-title">
+Loved By <span style="color:var(--gold)">Clients.</span>
+</h2>
+</div>
+
+<div class="rating-big">
+<div class="stars">★★★★★</div>
+<strong>4.9</strong>
+<span style="color:#777;">30 Reviews</span>
+</div>
+
+</div>
+
+
+<div class="review-grid">
+
+<div class="review reveal">
+<div class="review-stars">★★★★★</div>
+<p>
+“Best saloon & affordable services”
+</p>
+<div class="reviewer">
+<strong>Samad Siddiqui</strong>
+<span>Customer Review</span>
+</div>
+</div>
+
+
+<div class="review reveal">
+<div class="review-stars">★★★★★</div>
+<p>
+“Bhaii mai ek baar gya tha hair cutting ke liye uske bdd mai khud dobara khicha chla jaata hu itna acha kaat te h baal ✂️”
+</p>
+<div class="reviewer">
+<strong>Anmol</strong>
+<span>Customer Review</span>
+</div>
+</div>
+
+
+<div class="review reveal">
+<div class="review-stars">★★★★★</div>
+<p>
+“Amazing service. If you are coming here you will be satisfied, Do visit”
+</p>
+<div class="reviewer">
+<strong>Shobhit Gupta</strong>
+<span>Customer Review</span>
+</div>
+</div>
+
+
+<div class="review reveal">
+<div class="review-stars">★★★★★</div>
+<p>
+“Nice haircut and nice service And staff also polite”
+</p>
+<div class="reviewer">
+<strong>Haroon Azad</strong>
+<span>Customer Review</span>
+</div>
+</div>
+
+
+<div class="review reveal">
+<div class="review-stars">★★★★★</div>
+<p>
+“This saloon has professional stylist with good service”
+</p>
+<div class="reviewer">
+<strong>Mahir Gupta</strong>
+<span>Customer Review</span>
+</div>
+</div>
+
+
+<div class="review reveal">
+<div class="review-stars">★★★★★</div>
+<p>
+“Best hair & makeup salon great experience”
+</p>
+<div class="reviewer">
+<strong>Suhel Siddiqui</strong>
+<span>Customer Review</span>
+</div>
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="review">
 
-<blockquote>
-“Stay comfortable. Create memories.”
-</blockquote>
+<!-- LOCATION -->
 
-<small>
-SAIN DASS · KANPUR
-</small>
+<section class="location" id="location">
 
-</section>
+<div class="container">
 
-<section class="contact" id="contact">
+<div class="section-head center reveal">
 
-<div>
+<div class="section-label">Visit Us</div>
 
-  <div class="kicker">
-    Contact & Enquiry
-  </div>
+<h2 class="section-title">
+Find <span style="color:var(--gold)">The Studio.</span>
+</h2>
 
-  <h2>
-    Let's plan your stay.
-  </h2>
-
-  <p>
-    Send an enquiry for rooms, dining
-    or events.
-  </p>
-
-  <div class="details">
-
-```
-<div>
-  <small>Phone</small>
-  <b>+91 78805 92979</b>
 </div>
 
-<div>
-  <small>Address</small>
-  <b>Kaushalpuri, Kanpur</b>
-</div>
 
-<div>
-  <small>Dining</small>
-  <b>SD Eats</b>
-</div>
+<div class="location-grid">
 
-<div>
-  <small>Events</small>
-  <b>Parties & Functions</b>
-</div>
-```
+<div class="location-card reveal">
 
-  </div>
+<h3>Shoaib Makeup Studio & Academy</h3>
 
-  <div class="contact-buttons">
+<p>
+📍 Aarohi Bazaar, near Purniya Chauraha,<br>
+Sector H, Sector-A, Aliganj,<br>
+Lucknow, Uttar Pradesh 226024
+</p>
 
-```
-<a href="tel:+917880592979">
-  📞 Call Now
+<br>
+
+<p>
+🕙 <strong style="color:white;">Open · Closes 10 PM</strong>
+</p>
+
+<br>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Shoaib+Makeup+Studio+Academy+Aliganj+Lucknow"
+target="_blank"
+class="btn btn-gold"
+>
+Get Directions →
 </a>
 
-<a class="whatsapp"
-   href="https://wa.me/917880592979?text=Hello%20Sain%20Dass%2C%20I%20want%20to%20make%20an%20enquiry."
-   target="_blank">
-  💬 WhatsApp
-</a>
+</div>
 
-<a class="maps"
-   href="https://www.google.com/maps/search/?api=1&query=Kaushalpuri%2C%20Kanpur"
-   target="_blank">
-  📍 Google Maps
-</a>
-```
 
-  </div>
+<div class="map reveal">
+
+<div>
+
+<div style="font-size:40px;">📍</div>
+
+<h3 style="font-family:'Cormorant Garamond';font-size:30px;">
+Aliganj, Lucknow
+</h3>
+
+<p style="color:#aaa;margin:10px 0 20px;">
+Near Purniya Chauraha
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Shoaib+Makeup+Studio+Academy+Aliganj+Lucknow"
+target="_blank"
+class="btn btn-outline"
+>
+Open Google Maps
+</a>
 
 </div>
 
-<div class="formbox">
+</div>
 
-  <h3>
-    Send an Enquiry
-  </h3>
-
-  <form class="form"
-  onsubmit="event.preventDefault();alert('Demo enquiry submitted!');">
-
-```
-<input
-  required
-  placeholder="Your name">
-
-<input
-  required
-  type="tel"
-  placeholder="Phone number">
-
-<select>
-
-  <option>Room Enquiry</option>
-  <option>Dining</option>
-  <option>Birthday / Party</option>
-  <option>Wedding</option>
-  <option>Corporate Event</option>
-
-</select>
-
-<input type="date">
-
-<textarea
-  placeholder="Tell us what you need...">
-</textarea>
-
-<button class="btn" type="submit">
-  Send Enquiry
-</button>
-```
-
-  </form>
+</div>
 
 </div>
 
 </section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container reveal">
+
+<div class="section-label">Ready For Your New Look?</div>
+
+<h2>
+Let's Create Your<br>
+<span style="color:var(--gold)">Signature Style.</span>
+</h2>
+
+<p>
+Book your appointment or enquire about academy courses today.
+</p>
+
+<a href="#" onclick="openModal();return false;" class="btn btn-gold">
+Book Appointment →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-  <div class="logo">
-    SAIN <span>DASS</span>
-  </div>
+<div class="container">
 
-  <small>
-    © 2026 Hotel Website Demo
-  </small>
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<div class="logo">
+Shoaib <span>Studio</span>
+</div>
+
+<p>
+Professional makeup, hair styling and academy services
+in Aliganj, Lucknow.
+</p>
+
+</div>
+
+
+<div class="footer">
+
+<h4>Quick Links</h4>
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#academy">Academy</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+
+</div>
+
+
+<div class="footer">
+
+<h4>Contact</h4>
+
+<p>Aliganj, Lucknow</p>
+<p>Near Purniya Chauraha</p>
+<p>Open · Closes 10 PM</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+© 2026 Shoaib Makeup Studio & Academy. All Rights Reserved.
+</div>
+
+</div>
 
 </footer>
 
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+aria-label="WhatsApp"
+>
+⌕
+</a>
+
+
+<!-- APPOINTMENT MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<div class="close" onclick="closeModal()">×</div>
+
+<h2>Book Your <span style="color:var(--gold)">Appointment</span></h2>
+
+<form id="appointmentForm">
+
+<div class="form-group">
+<label>YOUR NAME</label>
+<input type="text" id="name" required placeholder="Enter your name">
+</div>
+
+<div class="form-group">
+<label>PHONE NUMBER</label>
+<input type="tel" id="phone" required placeholder="Enter phone number">
+</div>
+
+<div class="form-group">
+<label>SERVICE</label>
+
+<select id="service" required>
+
+<option value="">Select service</option>
+<option>Haircut & Styling</option>
+<option>Makeup</option>
+<option>Hair Styling</option>
+<option>Grooming</option>
+<option>Bridal & Events</option>
+<option>Academy Course Enquiry</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>MESSAGE</label>
+<textarea id="message" placeholder="Preferred date / time"></textarea>
+</div>
+
+<button type="submit" class="btn btn-gold" style="width:100%;border:0;cursor:pointer;">
+Send Enquiry on WhatsApp →
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* HEADER */
+
+window.addEventListener("scroll",function(){
+
+const header=document.getElementById("header");
+
+if(window.scrollY>30){
+header.classList.add("scrolled");
+}else{
+header.classList.remove("scrolled");
+}
+
+});
+
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document.getElementById("navLinks").classList.toggle("active");
+
+}
+
+
+/* MODAL */
+
+function openModal(){
+
+document.getElementById("modal").classList.add("active");
+
+}
+
+function closeModal(){
+
+document.getElementById("modal").classList.remove("active");
+
+}
+
+
+document.getElementById("modal").addEventListener("click",function(e){
+
+if(e.target===this){
+closeModal();
+}
+
+});
+
+
+/* WHATSAPP APPOINTMENT */
+
+document.getElementById("appointmentForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name=document.getElementById("name").value;
+const phone=document.getElementById("phone").value;
+const service=document.getElementById("service").value;
+const message=document.getElementById("message").value;
+
+
+/*
+IMPORTANT:
+Replace 91XXXXXXXXXX below with the actual
+Shoaib Studio WhatsApp number.
+*/
+
+const studioNumber="91XXXXXXXXXX";
+
+const text=
+"Hello Shoaib Makeup Studio & Academy,%0A%0A"+
+"*Appointment Enquiry*%0A"+
+"Name: "+encodeURIComponent(name)+"%0A"+
+"Phone: "+encodeURIComponent(phone)+"%0A"+
+"Service: "+encodeURIComponent(service)+"%0A"+
+"Message: "+encodeURIComponent(message);
+
+window.open(
+"https://wa.me/"+studioNumber+"?text="+text,
+"_blank"
+);
+
+});
+
+
+/* SCROLL REVEAL */
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.12
+});
+
+
+document.querySelectorAll(".reveal").forEach(el=>{
+observer.observe(el);
+});
+
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+link.addEventListener("click",function(){
+
+document.getElementById("navLinks").classList.remove("active");
+
+});
+
+});
+
+</script>
+
 </body>
 </html>
+```
