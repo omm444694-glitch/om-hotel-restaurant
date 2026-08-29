@@ -4,1703 +4,1346 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Glitters & Glam | Pro Makeup Studio & Beauty Salon | Lucknow</title>
+<title>VASTRA | Premium Indian Wear</title>
 
-<meta name="description" content="Glitters & Glam Pro Makeup Studio & Beauty Salon, Mahanagar Lucknow. Bridal makeup, party makeup, hair styling, beauty services and professional salon care.">
+<meta name="description" content="VASTRA Collection — Premium Indian ethnic wear in Tarnanganj, Kalpi. Explore elegant Indian wear and enquire directly on WhatsApp.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
-    --black:#0b0a09;
-    --black2:#12100e;
-    --cream:#f7f0e6;
-    --cream2:#eee2d0;
-    --gold:#c7a36a;
-    --gold2:#e6c78f;
-    --text:#eee8df;
-    --muted:#aaa39a;
-    --line:rgba(199,163,106,.25);
-    --white:#fff;
+  --cream:#f7f2ea;
+  --paper:#fffdf9;
+  --dark:#211b18;
+  --muted:#756b63;
+  --brown:#7d4935;
+  --line:#ded4c9;
+  --gold:#b08a55;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:"DM Sans",sans-serif;
-    background:var(--black);
-    color:var(--text);
-    overflow-x:hidden;
+  background:var(--cream);
+  color:var(--dark);
+  font-family:"DM Sans",Arial,sans-serif;
+  line-height:1.6;
 }
 
 a{
-    color:inherit;
-    text-decoration:none;
+  color:inherit;
+  text-decoration:none;
 }
 
 img{
-    width:100%;
-    display:block;
+  width:100%;
+  display:block;
 }
 
 .container{
-    width:min(1200px,92%);
-    margin:auto;
+  width:min(1180px,92%);
+  margin:auto;
 }
 
-/* PRELOADER */
+/* TOP BAR */
 
-.loader{
-    position:fixed;
-    inset:0;
-    background:var(--black);
-    z-index:9999;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:.7s;
+.topbar{
+  background:var(--dark);
+  color:#eee5da;
+  text-align:center;
+  padding:9px 15px;
+  font-size:11px;
+  letter-spacing:2px;
 }
 
-.loader.hide{
-    opacity:0;
-    visibility:hidden;
-}
-
-.loader-inner{
-    text-align:center;
-}
-
-.loader-logo{
-    font-family:"Cormorant Garamond",serif;
-    font-size:42px;
-    color:var(--cream);
-}
-
-.loader-logo span{
-    color:var(--gold);
-}
-
-.loader-line{
-    width:120px;
-    height:1px;
-    background:var(--gold);
-    margin:15px auto;
-    animation:loader 1.4s infinite;
-}
-
-@keyframes loader{
-    0%,100%{transform:scaleX(.3);opacity:.4}
-    50%{transform:scaleX(1);opacity:1}
-}
-
-/* HEADER */
+/* NAVIGATION */
 
 header{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    z-index:1000;
-    transition:.4s;
-}
-
-header.scrolled{
-    background:rgba(11,10,9,.94);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(247,242,234,.94);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(33,27,24,.1);
 }
 
 .nav{
-    height:88px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-    font-family:"Cormorant Garamond",serif;
-    font-size:31px;
-    font-weight:700;
-    letter-spacing:.5px;
-}
-
-.logo span{
-    color:var(--gold);
+  font-family:"Cormorant Garamond",serif;
+  font-size:35px;
+  font-weight:600;
+  letter-spacing:8px;
 }
 
 .nav-links{
-    display:flex;
-    align-items:center;
-    gap:30px;
+  display:flex;
+  gap:34px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
 }
 
 .nav-links a{
-    font-size:13px;
-    color:#d8d1c8;
-    transition:.3s;
+  position:relative;
 }
 
-.nav-links a:hover{
-    color:var(--gold2);
+.nav-links a:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:1px;
+  background:var(--brown);
+  transition:.3s;
+}
+
+.nav-links a:hover:after{
+  width:100%;
 }
 
 .nav-cta{
-    border:1px solid var(--gold);
-    padding:12px 20px;
-    color:var(--gold2)!important;
+  background:var(--dark);
+  color:white;
+  padding:12px 20px;
+  font-size:11px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:.3s;
 }
 
-.menu{
-    display:none;
-    font-size:27px;
-    cursor:pointer;
+.nav-cta:hover{
+  background:var(--brown);
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-    background:
-    linear-gradient(90deg,rgba(8,7,6,.98) 5%,rgba(8,7,6,.78) 48%,rgba(8,7,6,.2)),
-    url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=2000&q=90");
-    background-size:cover;
-    background-position:center;
+  min-height:calc(100vh - 120px);
+  display:grid;
+  grid-template-columns:43% 57%;
+  align-items:center;
+  gap:50px;
+  padding:55px 0 75px;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    border-radius:50%;
-    right:-180px;
-    top:-120px;
-    background:rgba(199,163,106,.13);
-    filter:blur(100px);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:780px;
-    padding-top:80px;
+.hero-copy{
+  padding-right:20px;
 }
 
 .eyebrow{
-    color:var(--gold2);
-    font-size:11px;
-    letter-spacing:5px;
-    text-transform:uppercase;
-    font-weight:700;
-    margin-bottom:24px;
+  color:var(--brown);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:11px;
+  font-weight:600;
 }
 
 .hero h1{
-    font-family:"Cormorant Garamond",serif;
-    font-size:clamp(62px,8vw,112px);
-    font-weight:500;
-    line-height:.84;
-    letter-spacing:-2px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(65px,8vw,112px);
+  font-weight:400;
+  line-height:.82;
+  letter-spacing:-3px;
+  margin:24px 0 28px;
 }
 
 .hero h1 span{
-    color:var(--gold2);
-    font-style:italic;
+  font-style:italic;
 }
 
-.hero-sub{
-    max-width:570px;
-    color:#c5beb5;
-    font-size:16px;
-    line-height:1.9;
-    margin-top:30px;
+.hero-description{
+  max-width:470px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.9;
+  margin-bottom:35px;
 }
 
-.buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-    margin-top:35px;
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:15px 25px;
-    font-size:13px;
-    font-weight:700;
-    transition:.35s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 24px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  transition:.3s;
 }
 
-.btn-gold{
-    background:var(--gold);
-    color:#0b0a09;
+.btn-dark{
+  background:var(--dark);
+  color:white;
 }
 
-.btn-gold:hover{
-    background:var(--gold2);
-    transform:translateY(-3px);
+.btn-dark:hover{
+  background:var(--brown);
+  transform:translateY(-2px);
 }
 
 .btn-light{
-    border:1px solid rgba(255,255,255,.4);
-    color:white;
+  border:1px solid var(--dark);
 }
 
 .btn-light:hover{
-    border-color:var(--gold);
-    color:var(--gold2);
+  background:var(--dark);
+  color:white;
 }
 
-.hero-rating{
-    display:flex;
-    align-items:center;
-    gap:16px;
-    margin-top:45px;
+.hero-visual{
+  position:relative;
 }
 
-.stars{
-    color:var(--gold2);
-    letter-spacing:4px;
+.hero-visual:before{
+  content:"";
+  position:absolute;
+  inset:18px -18px -18px 18px;
+  border:1px solid var(--line);
+  z-index:-1;
 }
 
-.hero-rating strong{
-    font-size:20px;
+.hero-visual img{
+  height:680px;
+  object-fit:cover;
 }
 
-.hero-rating small{
-    color:#999;
+.hero-badge{
+  position:absolute;
+  bottom:24px;
+  left:24px;
+  background:rgba(255,253,249,.94);
+  padding:17px 20px;
+  min-width:190px;
 }
 
-/* SECTIONS */
-
-section{
-    padding:120px 0;
+.hero-badge strong{
+  display:block;
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+  font-weight:500;
 }
 
-.label{
-    color:var(--gold);
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:14px;
-}
-
-.title{
-    font-family:"Cormorant Garamond",serif;
-    font-size:clamp(46px,6vw,76px);
-    font-weight:500;
-    line-height:.92;
-}
-
-.title span{
-    color:var(--gold2);
-    font-style:italic;
-}
-
-.desc{
-    color:var(--muted);
-    line-height:1.9;
-    max-width:600px;
-    margin-top:20px;
+.hero-badge small{
+  font-size:9px;
+  letter-spacing:2px;
+  color:var(--muted);
 }
 
 /* INTRO */
 
 .intro{
-    background:var(--cream);
-    color:#181512;
+  background:var(--dark);
+  color:white;
+  padding:105px 0;
 }
 
 .intro-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
+  display:grid;
+  grid-template-columns:1fr 1.7fr;
+  gap:70px;
+  align-items:start;
 }
 
-.intro .label{
-    color:#987642;
+.intro-label{
+  color:#caa878;
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
 }
 
-.intro .desc{
-    color:#655e56;
+.intro h2{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:400;
+  font-size:clamp(42px,5vw,68px);
+  line-height:1;
+  max-width:700px;
 }
 
-.intro-image{
-    position:relative;
+.intro p{
+  color:#c9c0b7;
+  font-size:16px;
+  line-height:2;
+  margin-top:25px;
+  max-width:680px;
 }
 
-.intro-image img{
-    height:600px;
-    object-fit:cover;
-}
-
-.intro-image::after{
-    content:"";
-    position:absolute;
-    inset:18px;
-    border:1px solid rgba(255,255,255,.65);
-    pointer-events:none;
-}
-
-.intro-number{
-    font-family:"Cormorant Garamond",serif;
-    font-size:130px;
-    color:rgba(199,163,106,.18);
-    line-height:1;
-    margin-top:25px;
-}
-
-.signature{
-    font-family:"Cormorant Garamond",serif;
-    font-size:28px;
-    font-style:italic;
-    color:#967747;
-}
-
-/* SERVICES */
-
-.services{
-    background:#0c0b0a;
-}
-
-.center{
-    text-align:center;
-}
-
-.center .desc{
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:1px;
-    background:var(--line);
-    margin-top:65px;
-    border:1px solid var(--line);
-}
-
-.service{
-    background:#0e0d0c;
-    padding:42px 32px;
-    min-height:285px;
-    transition:.4s;
-    position:relative;
-}
-
-.service:hover{
-    background:#171410;
-}
-
-.service-no{
-    color:#665844;
-    font-size:12px;
-    margin-bottom:35px;
-}
-
-.service-icon{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-.service h3{
-    font-family:"Cormorant Garamond",serif;
-    font-size:31px;
-    font-weight:500;
-    margin-bottom:12px;
-}
-
-.service p{
-    color:#918b83;
-    font-size:13px;
-    line-height:1.8;
-}
-
-/* FEATURE STRIP */
-
-.feature-strip{
-    background:#15110c;
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    padding:35px 0;
-}
-
-.strip-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    text-align:center;
-}
-
-.strip-item{
-    border-right:1px solid var(--line);
-}
-
-.strip-item:last-child{
-    border:0;
-}
+/* CATEGORY */
 
-.strip-item strong{
-    display:block;
-    color:var(--gold2);
-    font-family:"Cormorant Garamond",serif;
-    font-size:29px;
+.categories{
+  padding:110px 0 75px;
 }
-
-.strip-item span{
-    color:#888;
-    font-size:11px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-
-/* BRIDAL */
 
-.bridal{
-    background:var(--cream);
-    color:#17130f;
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:42px;
 }
 
-.bridal-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:80px;
-    align-items:center;
+.section-kicker{
+  color:var(--brown);
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-weight:600;
 }
 
-.bridal-image{
-    height:650px;
-    overflow:hidden;
+.section-title{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:400;
+  font-size:58px;
+  line-height:1;
+  margin-top:12px;
 }
 
-.bridal-image img{
-    height:100%;
-    object-fit:cover;
+.section-note{
+  color:var(--muted);
+  font-size:12px;
+  max-width:250px;
 }
 
-.bridal .label{
-    color:#967747;
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-.bridal .desc{
-    color:#665f56;
+.category{
+  position:relative;
+  height:400px;
+  overflow:hidden;
 }
 
-.bridal-list{
-    margin-top:30px;
-    border-top:1px solid #d4c7b6;
+.category img{
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s;
 }
 
-.bridal-item{
-    display:flex;
-    justify-content:space-between;
-    padding:17px 0;
-    border-bottom:1px solid #d4c7b6;
-    color:#484039;
+.category:hover img{
+  transform:scale(1.05);
 }
 
-.bridal-item span:last-child{
-    color:#9a7741;
+.category-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:flex-end;
+  padding:25px;
+  background:linear-gradient(transparent 40%,rgba(0,0,0,.68));
+  color:white;
 }
 
-/* GALLERY */
-
-.gallery{
-    background:#0b0a09;
+.category-overlay h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:32px;
+  font-weight:400;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-auto-rows:260px;
-    gap:10px;
-    margin-top:55px;
+.category-overlay p{
+  font-size:10px;
+  letter-spacing:1.5px;
+  opacity:.8;
 }
 
-.gallery-item{
-    overflow:hidden;
-    position:relative;
-}
+/* COLLECTION */
 
-.gallery-item:first-child{
-    grid-column:span 2;
-    grid-row:span 2;
+.collection{
+  padding:75px 0 115px;
 }
 
-.gallery-item:nth-child(4){
-    grid-column:span 2;
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.8s;
-    filter:saturate(.85);
+.product{
+  background:var(--paper);
+  border:1px solid #e7ddd2;
+  transition:.35s;
 }
 
-.gallery-item:hover img{
-    transform:scale(1.08);
-    filter:saturate(1);
+.product:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(50,35,25,.1);
 }
 
-.gallery-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:end;
-    padding:22px;
-    background:linear-gradient(transparent,rgba(0,0,0,.65));
-    opacity:0;
-    transition:.4s;
+.product-image{
+  height:470px;
+  overflow:hidden;
+  background:#e7ded4;
 }
 
-.gallery-item:hover .gallery-overlay{
-    opacity:1;
+.product-image img{
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s;
 }
 
-.gallery-overlay span{
-    color:white;
-    font-family:"Cormorant Garamond",serif;
-    font-size:24px;
+.product:hover .product-image img{
+  transform:scale(1.04);
 }
-
-/* REVIEWS */
 
-.reviews{
-    background:#15120f;
+.product-info{
+  padding:22px;
 }
 
-.review-heading{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    gap:30px;
+.product-number{
+  color:var(--brown);
+  font-size:9px;
+  letter-spacing:2px;
 }
 
-.review-score{
-    text-align:right;
+.product-info h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:27px;
+  font-weight:500;
+  margin:5px 0;
 }
 
-.review-score strong{
-    display:block;
-    font-family:"Cormorant Garamond",serif;
-    font-size:72px;
-    line-height:.8;
-    color:var(--cream);
+.product-info p{
+  color:var(--muted);
+  font-size:11px;
+  margin-bottom:18px;
 }
 
-.review-score span{
-    color:#777;
-    font-size:12px;
+.product-link{
+  color:var(--brown);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
 }
 
-.review-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-    margin-top:60px;
-}
+/* FEATURE */
 
-.review{
-    background:#0f0e0c;
-    border:1px solid #29241e;
-    padding:30px;
+.feature{
+  background:#e9dfd3;
+  padding:110px 0;
 }
 
-.review .stars{
-    margin-bottom:20px;
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
 }
 
-.review p{
-    color:#b4ada3;
-    line-height:1.8;
-    font-size:13px;
-    min-height:90px;
+.feature-image{
+  position:relative;
 }
 
-.reviewer{
-    border-top:1px solid #29241e;
-    padding-top:17px;
-    margin-top:20px;
+.feature-image img{
+  height:570px;
+  object-fit:cover;
 }
 
-.reviewer strong{
-    display:block;
-    font-size:13px;
+.feature-copy h2{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:400;
+  font-size:70px;
+  line-height:.95;
+  margin:17px 0 25px;
 }
 
-.reviewer span{
-    color:#6d675f;
-    font-size:11px;
+.feature-copy p{
+  color:var(--muted);
+  max-width:500px;
+  line-height:2;
+  margin-bottom:30px;
 }
 
-/* LOCATION */
-
-.location{
-    background:var(--cream);
-    color:#16130f;
-}
+/* WHY */
 
-.location-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:25px;
-    margin-top:55px;
+.why{
+  padding:110px 0;
+  background:var(--paper);
 }
 
-.location-card{
-    background:#e9ddcc;
-    padding:45px;
+.why-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 55px;
 }
 
-.location-card h3{
-    font-family:"Cormorant Garamond",serif;
-    font-size:34px;
-    font-weight:500;
-    margin-bottom:20px;
+.why-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:58px;
+  font-weight:400;
+  line-height:1;
+  margin-top:12px;
 }
 
-.location-card p{
-    color:#625a51;
-    line-height:1.8;
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
-.contact-row{
-    margin-top:22px;
-    padding-top:22px;
-    border-top:1px solid #cdbda8;
+.why-item{
+  text-align:center;
+  padding:38px 22px;
+  border-right:1px solid var(--line);
 }
 
-.contact-row strong{
-    display:block;
-    color:#1c1814;
-    margin-bottom:5px;
+.why-item:last-child{
+  border-right:0;
 }
 
-.map{
-    min-height:360px;
-    background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1524666041070-9f4b5e3f7b3f?auto=format&fit=crop&w=1400&q=85");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
+.why-icon{
+  font-family:"Cormorant Garamond",serif;
+  color:var(--brown);
+  font-size:34px;
 }
 
-.map-pin{
-    font-size:42px;
+.why-item h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:25px;
+  font-weight:500;
+  margin:8px 0;
 }
 
-.map h3{
-    font-family:"Cormorant Garamond",serif;
-    font-size:35px;
-    font-weight:500;
+.why-item p{
+  color:var(--muted);
+  font-size:11px;
 }
 
 /* CTA */
 
 .cta{
-    text-align:center;
-    background:
-    linear-gradient(rgba(10,8,6,.88),rgba(10,8,6,.94)),
-    url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1800&q=85");
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+  padding:115px 0;
+  background:var(--dark);
+  color:white;
+  text-align:center;
+}
+
+.cta .section-kicker{
+  color:#caa878;
 }
 
 .cta h2{
-    font-family:"Cormorant Garamond",serif;
-    font-size:clamp(50px,7vw,90px);
-    font-weight:500;
-    line-height:.9;
-}
-
-.cta h2 span{
-    color:var(--gold2);
-    font-style:italic;
+  font-family:"Cormorant Garamond",serif;
+  font-size:72px;
+  font-weight:400;
+  line-height:.95;
+  margin:15px 0 20px;
 }
 
 .cta p{
-    color:#999;
-    margin:22px 0 30px;
+  color:#c8bfb6;
+  max-width:520px;
+  margin:0 auto 32px;
+  font-size:14px;
+}
+
+.cta .btn{
+  background:white;
+  color:var(--dark);
+}
+
+.cta .btn:hover{
+  background:#eadfd2;
+}
+
+/* CONTACT */
+
+.contact{
+  padding:110px 0;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.contact h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:65px;
+  font-weight:400;
+  line-height:.95;
+  margin:15px 0 20px;
+}
+
+.contact-intro{
+  color:var(--muted);
+  max-width:480px;
+}
+
+.details{
+  margin-top:35px;
+  display:grid;
+  gap:22px;
+}
+
+.detail{
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+
+.detail span{
+  display:block;
+  color:var(--brown);
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+.detail strong{
+  font-size:14px;
+  font-weight:500;
+}
+
+.contact-card{
+  background:#e9dfd3;
+  padding:45px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:380px;
+}
+
+.contact-card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:40px;
+  font-weight:400;
+}
+
+.contact-card p{
+  color:var(--muted);
+  font-size:13px;
+  margin:12px 0 25px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#070605;
-    padding:70px 0 25px;
+  background:#171311;
+  color:#cfc5bc;
+  padding:45px 0 25px;
 }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:50px;
-    padding-bottom:50px;
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding-bottom:35px;
+  border-bottom:1px solid #382f2a;
 }
 
-.footer-brand p{
-    max-width:400px;
-    color:#777;
-    line-height:1.8;
-    margin-top:15px;
-    font-size:13px;
+.footer-logo{
+  font-family:"Cormorant Garamond",serif;
+  color:white;
+  font-size:38px;
+  letter-spacing:7px;
 }
 
-.footer h4{
-    color:var(--gold);
-    font-size:11px;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    margin-bottom:20px;
+.footer-top p{
+  font-size:11px;
+  max-width:300px;
 }
 
-.footer a,
-.footer p{
-    display:block;
-    color:#777;
-    font-size:13px;
-    margin-bottom:11px;
-}
-
-.copyright{
-    border-top:1px solid #1c1a17;
-    padding-top:22px;
-    text-align:center;
-    color:#4e4a44;
-    font-size:11px;
+.footer-bottom{
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  font-size:9px;
+  letter-spacing:1px;
+  color:#887d74;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
-    position:fixed;
-    right:24px;
-    bottom:24px;
-    width:61px;
-    height:61px;
-    background:#25d366;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:1500;
-    box-shadow:0 10px 35px rgba(0,0,0,.45);
-    transition:.3s;
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:2000;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:#25d366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
+  box-shadow:0 8px 30px rgba(0,0,0,.22);
+  transition:.3s;
 }
 
 .whatsapp:hover{
-    transform:scale(1.1);
-}
-
-.whatsapp svg{
-    width:29px;
-    height:29px;
-    fill:white;
-}
-
-/* MODAL */
-
-.modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.82);
-    backdrop-filter:blur(12px);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:3000;
-    padding:20px;
-}
-
-.modal.active{
-    display:flex;
-}
-
-.modal-box{
-    width:min(540px,100%);
-    background:#12100e;
-    border:1px solid var(--line);
-    padding:38px;
-    position:relative;
-}
-
-.close{
-    position:absolute;
-    right:20px;
-    top:15px;
-    font-size:28px;
-    color:#999;
-    cursor:pointer;
-}
-
-.modal h2{
-    font-family:"Cormorant Garamond",serif;
-    font-size:43px;
-    font-weight:500;
-    margin-bottom:25px;
-}
-
-.input{
-    margin-bottom:15px;
-}
-
-.input label{
-    display:block;
-    color:#777;
-    font-size:10px;
-    letter-spacing:1px;
-    margin-bottom:7px;
-}
-
-.input input,
-.input select,
-.input textarea{
-    width:100%;
-    background:#090807;
-    border:1px solid #29251f;
-    color:white;
-    padding:14px;
-    outline:none;
-    font-family:inherit;
-}
-
-.input textarea{
-    min-height:85px;
-    resize:vertical;
-}
-
-.input input:focus,
-.input select:focus,
-.input textarea:focus{
-    border-color:var(--gold);
-}
-
-/* REVEAL */
-
-.reveal{
-    opacity:0;
-    transform:translateY(35px);
-    transition:all .8s ease;
-}
-
-.reveal.show{
-    opacity:1;
-    transform:none;
+  transform:scale(1.08);
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:850px){
 
-    .nav{
-        height:75px;
-    }
+  .nav-links{
+    display:none;
+  }
 
-    .nav-links{
-        display:none;
-        position:absolute;
-        top:75px;
-        left:0;
-        width:100%;
-        background:#0b0a09;
-        border-top:1px solid #29251f;
-        flex-direction:column;
-        padding:25px;
-        gap:20px;
-    }
+  .nav{
+    min-height:68px;
+  }
 
-    .nav-links.active{
-        display:flex;
-    }
+  .nav-cta{
+    padding:10px 13px;
+  }
 
-    .menu{
-        display:block;
-    }
+  .hero{
+    grid-template-columns:1fr;
+    padding:45px 0 65px;
+  }
 
-    .intro-grid,
-    .bridal-grid{
-        grid-template-columns:1fr;
-    }
+  .hero-copy{
+    padding-right:0;
+  }
 
-    .intro-image{
-        order:2;
-    }
+  .hero h1{
+    font-size:70px;
+  }
 
-    .intro-image img{
-        height:450px;
-    }
+  .hero-visual img{
+    height:540px;
+  }
 
-    .bridal-image{
-        height:500px;
-    }
+  .intro-grid,
+  .feature-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
 
-    .service-grid{
-        grid-template-columns:1fr 1fr;
-    }
+  .category-grid{
+    grid-template-columns:1fr 1fr;
+  }
 
-    .review-grid{
-        grid-template-columns:1fr 1fr;
-    }
+  .product-grid{
+    grid-template-columns:1fr 1fr;
+  }
 
-    .location-grid{
-        grid-template-columns:1fr;
-    }
+  .why-grid{
+    grid-template-columns:1fr 1fr;
+  }
 
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
+  .why-item:nth-child(2){
+    border-right:0;
+  }
+
+  .why-item:nth-child(-n+2){
+    border-bottom:1px solid var(--line);
+  }
+
+  .feature-image img{
+    height:500px;
+  }
 }
 
-@media(max-width:600px){
+@media(max-width:550px){
 
-    section{
-        padding:80px 0;
-    }
+  .logo{
+    font-size:27px;
+    letter-spacing:5px;
+  }
 
-    .hero{
-        min-height:850px;
-        background-position:62% center;
-    }
+  .topbar{
+    font-size:8px;
+    letter-spacing:1.3px;
+  }
 
-    .hero h1{
-        font-size:64px;
-    }
+  .hero{
+    min-height:auto;
+  }
 
-    .hero-sub{
-        font-size:14px;
-    }
+  .hero h1{
+    font-size:61px;
+    letter-spacing:-2px;
+  }
 
-    .service-grid,
-    .review-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
+  .hero-description{
+    font-size:13px;
+  }
 
-    .strip-grid{
-        grid-template-columns:1fr 1fr;
-        gap:25px;
-    }
+  .hero-visual:before{
+    inset:10px -10px -10px 10px;
+  }
 
-    .strip-item:nth-child(2){
-        border:0;
-    }
+  .hero-visual img{
+    height:470px;
+  }
 
-    .gallery-grid{
-        grid-template-columns:1fr 1fr;
-        grid-auto-rows:170px;
-    }
+  .intro,
+  .categories,
+  .collection,
+  .feature,
+  .why,
+  .cta,
+  .contact{
+    padding-top:75px;
+    padding-bottom:75px;
+  }
 
-    .gallery-item:first-child{
-        grid-column:span 2;
-        grid-row:span 1;
-    }
+  .section-head{
+    display:block;
+  }
 
-    .gallery-item:nth-child(4){
-        grid-column:span 1;
-    }
+  .section-title{
+    font-size:48px;
+  }
 
-    .review-heading{
-        flex-direction:column;
-        align-items:flex-start;
-    }
+  .section-note{
+    margin-top:15px;
+  }
 
-    .review-score{
-        text-align:left;
-    }
+  .category-grid,
+  .product-grid{
+    grid-template-columns:1fr;
+  }
 
-    .location-card{
-        padding:30px;
-    }
+  .category{
+    height:430px;
+  }
 
-    .modal-box{
-        padding:28px 20px;
-    }
+  .product-image{
+    height:480px;
+  }
 
-    .whatsapp{
-        width:55px;
-        height:55px;
-        right:17px;
-        bottom:17px;
-    }
+  .feature-copy h2{
+    font-size:54px;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .why-item{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .why-item:last-child{
+    border-bottom:0;
+  }
+
+  .cta h2{
+    font-size:55px;
+  }
+
+  .contact h2{
+    font-size:53px;
+  }
+
+  .contact-card{
+    padding:30px;
+  }
+
+  .footer-top,
+  .footer-bottom{
+    flex-direction:column;
+  }
+
+  .whatsapp{
+    width:56px;
+    height:56px;
+    right:16px;
+    bottom:16px;
+  }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
+<div class="topbar">
+  PREMIUM INDIAN WEAR • TARNANGANJ, KALPI
+</div>
 
-<div class="loader" id="loader">
-    <div class="loader-inner">
-        <div class="loader-logo">Glitters <span>&</span> Glam</div>
-        <div class="loader-line"></div>
+<header>
+  <nav class="nav container">
+
+    <a href="#home" class="logo">VASTRA</a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
-</div>
 
-<!-- HEADER -->
+    <a class="nav-cta"
+       href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20know%20about%20your%20collection."
+       target="_blank">
+      WhatsApp
+    </a>
 
-<header id="header">
-
-<div class="container nav">
-
-<a href="#home" class="logo">
-Glitters <span>& Glam</span>
-</a>
-
-<nav class="nav-links" id="navLinks">
-
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#bridal">Bridal</a>
-<a href="#gallery">Gallery</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
-
-<a href="#" class="nav-cta" onclick="openModal();return false;">
-Book Appointment
-</a>
-
-</nav>
-
-<div class="menu" onclick="toggleMenu()">☰</div>
-
-</div>
-
+  </nav>
 </header>
 
+<main id="home">
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero container">
 
-<div class="container">
+  <div class="hero-copy">
 
-<div class="hero-content reveal">
+    <div class="eyebrow">The New Indian Edit</div>
 
-<div class="eyebrow">
-Pro Makeup Studio • Beauty Salon
-</div>
+    <h1>
+      Wear<br>
+      <span>your</span><br>
+      story.
+    </h1>
 
-<h1>
-Where Beauty<br>
-Becomes <span>Art.</span>
-</h1>
+    <p class="hero-description">
+      Discover elegant Indian wear curated for
+      celebrations, special moments and effortless
+      everyday style.
+    </p>
 
-<p class="hero-sub">
-Welcome to Glitters & Glam — a premium makeup studio and beauty
-destination in Mahanagar, Lucknow, created for unforgettable looks,
-beautiful moments and confident you.
-</p>
+    <div class="hero-buttons">
 
-<div class="buttons">
+      <a href="#collection" class="btn btn-dark">
+        Explore Collection
+      </a>
 
-<a href="#services" class="btn btn-gold">
-Explore Services →
-</a>
+      <a href="#contact" class="btn btn-light">
+        Visit Store
+      </a>
 
-<a href="#" class="btn btn-light" onclick="openModal();return false;">
-Book Appointment
-</a>
+    </div>
 
-</div>
+  </div>
 
-<div class="hero-rating">
+  <div class="hero-visual">
 
-<div class="stars">★★★★★</div>
+    <img src="images/1.jpg"
+         alt="VASTRA premium Indian wear">
 
-<div>
-<strong>4.9</strong>
-<small> / 5 · 339 Reviews</small>
-</div>
+    <div class="hero-badge">
+      <strong>VASTRA Collection</strong>
+      <small>TIMELESS • ELEGANT • INDIAN</small>
+    </div>
 
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- BRAND INTRO -->
 
 <section class="intro" id="about">
 
-<div class="container intro-grid">
+  <div class="container intro-grid">
 
-<div class="intro-image reveal">
+    <div>
+      <div class="intro-label">The VASTRA Story</div>
+    </div>
 
-<img
-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1100&q=90"
-alt="Glitters and Glam Beauty Salon"
->
+    <div>
+      <h2>
+        Tradition with a
+        contemporary soul.
+      </h2>
 
-</div>
+      <p>
+        VASTRA brings together the beauty of
+        Indian fashion and a refined modern
+        aesthetic. From graceful everyday
+        silhouettes to festive looks, discover
+        pieces selected to make every occasion
+        feel special.
+      </p>
+    </div>
 
-<div class="reveal">
-
-<div class="label">The Studio</div>
-
-<h2 class="title">
-A Place For<br>
-<span>Your Beauty.</span>
-</h2>
-
-<p class="desc">
-Glitters & Glam-Pro Makeup Studio & Beauty Salon brings together
-professional makeup artistry, beauty care and styling in one elegant
-destination in Mahanagar, Lucknow.
-</p>
-
-<p class="desc">
-From bridal transformations to everyday beauty and hair styling,
-every service is designed with attention to detail, comfort and your
-individual style in mind.
-</p>
-
-<div class="intro-number">01</div>
-
-<div class="signature">
-Beauty. Confidence. You.
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- FEATURE STRIP -->
+<!-- CATEGORIES -->
 
-<div class="feature-strip">
+<section class="categories container" id="categories">
 
-<div class="container strip-grid">
+  <div class="section-head">
 
-<div class="strip-item">
-<strong>4.9★</strong>
-<span>Google Rating</span>
-</div>
+    <div>
+      <div class="section-kicker">Explore</div>
+      <h2 class="section-title">Shop by mood.</h2>
+    </div>
 
-<div class="strip-item">
-<strong>339+</strong>
-<span>Reviews</span>
-</div>
+    <p class="section-note">
+      Find your next favourite look from
+      our curated Indian wear collection.
+    </p>
 
-<div class="strip-item">
-<strong>Pro</strong>
-<span>Makeup Artists</span>
-</div>
+  </div>
 
-<div class="strip-item">
-<strong>100%</strong>
-<span>Client Focused</span>
-</div>
+  <div class="category-grid">
 
-</div>
+    <a href="#collection" class="category">
 
-</div>
+      <img src="images/2.jpg"
+           alt="VASTRA ethnic collection">
 
+      <div class="category-overlay">
+        <div>
+          <p>01 — COLLECTION</p>
+          <h3>Elegant Suits</h3>
+        </div>
+      </div>
 
-<!-- SERVICES -->
+    </a>
 
-<section class="services" id="services">
+    <a href="#collection" class="category">
 
-<div class="container">
+      <img src="images/3.jpg"
+           alt="VASTRA festive wear">
 
-<div class="center reveal">
+      <div class="category-overlay">
+        <div>
+          <p>02 — COLLECTION</p>
+          <h3>Festive Edit</h3>
+        </div>
+      </div>
 
-<div class="label">Our Services</div>
+    </a>
 
-<h2 class="title">
-Designed Around<br>
-<span>Your Style.</span>
-</h2>
+    <a href="#collection" class="category">
 
-<p class="desc">
-Professional beauty services for weddings, celebrations, events
-and every occasion where you want to look your best.
-</p>
+      <img src="images/4.jpg"
+           alt="VASTRA traditional wear">
 
-</div>
+      <div class="category-overlay">
+        <div>
+          <p>03 — COLLECTION</p>
+          <h3>Signature Looks</h3>
+        </div>
+      </div>
 
+    </a>
 
-<div class="service-grid">
-
-<div class="service reveal">
-<div class="service-no">01 / BEAUTY</div>
-<div class="service-icon">✦</div>
-<h3>Bridal Makeup</h3>
-<p>Elegant bridal makeup looks designed around your features, outfit and special day.</p>
-</div>
-
-<div class="service reveal">
-<div class="service-no">02 / MAKEUP</div>
-<div class="service-icon">✧</div>
-<h3>Party Makeup</h3>
-<p>Glamorous, polished makeup for parties, celebrations and memorable evenings.</p>
-</div>
-
-<div class="service reveal">
-<div class="service-no">03 / HAIR</div>
-<div class="service-icon">⌁</div>
-<h3>Hair Styling</h3>
-<p>Modern hair styling and finishing created to complement your complete look.</p>
-</div>
-
-<div class="service reveal">
-<div class="service-no">04 / CARE</div>
-<div class="service-icon">◇</div>
-<h3>Hair Spa</h3>
-<p>Relaxing hair care treatments focused on a fresh and beautiful finish.</p>
-</div>
-
-<div class="service reveal">
-<div class="service-no">05 / BEAUTY</div>
-<div class="service-icon">♡</div>
-<h3>Beauty Care</h3>
-<p>Professional beauty services with careful attention to comfort and detail.</p>
-</div>
-
-<div class="service reveal">
-<div class="service-no">06 / COMPLETE</div>
-<div class="service-icon">∞</div>
-<h3>Complete Glam</h3>
-<p>A complete beauty experience combining makeup, hair and finishing touches.</p>
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- BRIDAL -->
+<!-- COLLECTION -->
 
-<section class="bridal" id="bridal">
+<section class="collection container" id="collection">
 
-<div class="container bridal-grid">
+  <div class="section-head">
 
-<div class="bridal-image reveal">
+    <div>
+      <div class="section-kicker">Curated Collection</div>
+      <h2 class="section-title">Selected pieces.</h2>
+    </div>
 
-<img
-src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1100&q=90"
-alt="Bridal Makeup"
->
+    <p class="section-note">
+      Prices and availability are available
+      directly through WhatsApp.
+    </p>
 
-</div>
+  </div>
 
-<div class="reveal">
 
-<div class="label">Bridal Experience</div>
+  <div class="product-grid">
 
-<h2 class="title">
-Your Day.<br>
-Your <span>Glow.</span>
-</h2>
 
-<p class="desc">
-Your wedding look should feel like you — elevated, elegant and
-beautiful. Our bridal services are created to bring together makeup,
-hair styling and finishing details for your special celebration.
-</p>
+    <article class="product">
 
-<div class="bridal-list">
+      <div class="product-image">
+        <img src="images/1.jpg"
+             alt="VASTRA Collection piece">
+      </div>
 
-<div class="bridal-item">
-<span>Bridal Makeup</span>
-<span>✦</span>
-</div>
+      <div class="product-info">
 
-<div class="bridal-item">
-<span>Bridal Hair Styling</span>
-<span>✦</span>
-</div>
+        <div class="product-number">LOOK 01</div>
 
-<div class="bridal-item">
-<span>Engagement / Reception</span>
-<span>✦</span>
-</div>
+        <h3>Signature Edit</h3>
 
-<div class="bridal-item">
-<span>Party & Event Looks</span>
-<span>✦</span>
-</div>
+        <p>
+          Elegant Indian wear • Ask for details
+        </p>
 
-</div>
+        <a class="product-link"
+           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2001."
+           target="_blank">
+          ENQUIRE ON WHATSAPP →
+        </a>
 
-<br>
+      </div>
 
-<a href="#" onclick="openModal();return false;" class="btn btn-gold">
-Enquire For Bridal Booking →
-</a>
+    </article>
 
-</div>
 
-</div>
+    <article class="product">
+
+      <div class="product-image">
+        <img src="images/2.jpg"
+             alt="VASTRA suit collection">
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-number">LOOK 02</div>
+
+        <h3>Grace Edit</h3>
+
+        <p>
+          Refined details • Elegant finish
+        </p>
+
+        <a class="product-link"
+           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2002."
+           target="_blank">
+          ENQUIRE ON WHATSAPP →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="images/3.jpg"
+             alt="VASTRA festive collection">
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-number">LOOK 03</div>
+
+        <h3>Festive Edit</h3>
+
+        <p>
+          Designed for special occasions
+        </p>
+
+        <a class="product-link"
+           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2003."
+           target="_blank">
+          ENQUIRE ON WHATSAPP →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="images/4.jpg"
+             alt="VASTRA traditional outfit">
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-number">LOOK 04</div>
+
+        <h3>Heritage Edit</h3>
+
+        <p>
+          Timeless Indian elegance
+        </p>
+
+        <a class="product-link"
+           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2004."
+           target="_blank">
+          ENQUIRE ON WHATSAPP →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="images/5.jpg"
+             alt="VASTRA latest collection">
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-number">LOOK 05</div>
+
+        <h3>New Arrival</h3>
+
+        <p>
+          Latest collection • Enquire now
+        </p>
+
+        <a class="product-link"
+           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2005."
+           target="_blank">
+          ENQUIRE ON WHATSAPP →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="product">
+
+      <div class="product-image">
+        <img src="images/1.jpg"
+             alt="VASTRA featured look">
+      </div>
+
+      <div class="product-info">
+
+        <div class="product-number">LOOK 06</div>
+
+        <h3>VASTRA Select</h3>
+
+        <p>
+          Ask us about sizes and availability
+        </p>
+
+        <a class="product-link"
+           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20please%20share%20details%20for%20Look%2006."
+           target="_blank">
+          ENQUIRE ON WHATSAPP →
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
 
 </section>
 
 
-<!-- GALLERY -->
+<!-- FEATURE -->
 
-<section class="gallery" id="gallery">
+<section class="feature">
 
-<div class="container">
+  <div class="container feature-grid">
 
-<div class="center reveal">
+    <div class="feature-image">
 
-<div class="label">Our Work</div>
+      <img src="images/4.jpg"
+           alt="VASTRA festive Indian wear">
 
-<h2 class="title">
-Moments Made<br>
-<span>Beautiful.</span>
-</h2>
+    </div>
 
-<p class="desc">
-A glimpse of the beauty, styling and glamour that inspires Glitters & Glam.
-</p>
+    <div class="feature-copy">
 
-</div>
+      <div class="section-kicker">
+        Made For Moments
+      </div>
 
+      <h2>
+        Dress for the
+        moments that matter.
+      </h2>
 
-<div class="gallery-grid">
+      <p>
+        Family celebrations, festive evenings,
+        special occasions or simply a day when
+        you want to feel your best — discover
+        Indian wear that fits the moment.
+      </p>
 
-<div class="gallery-item reveal">
+      <a class="btn btn-dark"
+         href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20please%20share%20your%20latest%20collection."
+         target="_blank">
+        Ask For Latest Collection
+      </a>
 
-<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1100&q=90" alt="Makeup">
+    </div>
 
-<div class="gallery-overlay">
-<span>Makeup Artistry</span>
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=90" alt="Hair styling">
-
-<div class="gallery-overlay">
-<span>Hair Styling</span>
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=90" alt="Beauty">
-
-<div class="gallery-overlay">
-<span>Beauty</span>
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=90" alt="Makeup look">
-
-<div class="gallery-overlay">
-<span>Glam Look</span>
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=90" alt="Salon">
-
-<div class="gallery-overlay">
-<span>Salon Experience</span>
-</div>
-
-</div>
-
-
-<div class="gallery-item reveal">
-
-<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=90" alt="Makeup artist">
-
-<div class="gallery-overlay">
-<span>Signature Style</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- REVIEWS -->
+<!-- WHY VASTRA -->
 
-<section class="reviews" id="reviews">
+<section class="why">
 
-<div class="container">
+  <div class="container">
 
-<div class="review-heading reveal">
+    <div class="why-head">
 
-<div>
+      <div class="section-kicker">
+        The VASTRA Difference
+      </div>
 
-<div class="label">Client Love</div>
+      <h2>
+        Chosen with intention.
+      </h2>
 
-<h2 class="title">
-Loved By<br>
-<span>339+ Clients.</span>
-</h2>
+    </div>
 
-</div>
+    <div class="why-grid">
 
-<div class="review-score">
+      <div class="why-item">
+        <div class="why-icon">01</div>
+        <h3>Curated Style</h3>
+        <p>Thoughtfully selected Indian wear.</p>
+      </div>
 
-<div class="stars">★★★★★</div>
+      <div class="why-item">
+        <div class="why-icon">02</div>
+        <h3>Elegant Details</h3>
+        <p>Looks made to stand out beautifully.</p>
+      </div>
 
-<strong>4.9</strong>
+      <div class="why-item">
+        <div class="why-icon">03</div>
+        <h3>Personal Service</h3>
+        <p>Ask directly about size and availability.</p>
+      </div>
 
-<span>Google Rating · 339 Reviews</span>
+      <div class="why-item">
+        <div class="why-icon">04</div>
+        <h3>Local Boutique</h3>
+        <p>Visit us in Tarnanganj, Kalpi.</p>
+      </div>
 
-</div>
+    </div>
 
-</div>
-
-
-<div class="review-grid">
-
-<div class="review reveal">
-
-<div class="stars">★★★★★</div>
-
-<p>
-“Ambience 💯 Service 💯 Staff 💯 New go to place in town ❤️ Will come again soon ✨”
-</p>
-
-<div class="reviewer">
-<strong>Google Customer</strong>
-<span>Verified Review</span>
-</div>
-
-</div>
-
-
-<div class="review reveal">
-
-<div class="stars">★★★★★</div>
-
-<p>
-“Best service and best working in progress in work all team members.”
-</p>
-
-<div class="reviewer">
-<strong>Google Customer</strong>
-<span>Verified Review</span>
-</div>
-
-</div>
-
-
-<div class="review reveal">
-
-<div class="stars">★★★★★</div>
-
-<p>
-“A perfect place with an easily approachable location.”
-</p>
-
-<div class="reviewer">
-<strong>Google Customer</strong>
-<span>Verified Review</span>
-</div>
-
-</div>
-
-
-<div class="review reveal">
-
-<div class="stars">★★★★★</div>
-
-<p>
-“I had an amazing experience with this makeup artist! The makeup was absolutely flawless, elegant, and long-lasting.”
-</p>
-
-<div class="reviewer">
-<strong>Divyanshi Tripathi</strong>
-<span>Customer Review</span>
-</div>
-
-</div>
-
-
-<div class="review reveal">
-
-<div class="stars">★★★★★</div>
-
-<p>
-“Clean, professional, and prompt. Fabulous haircut and professional consultation.”
-</p>
-
-<div class="reviewer">
-<strong>Iram Lalima</strong>
-<span>Customer Review</span>
-</div>
-
-</div>
-
-
-<div class="review reveal">
-
-<div class="stars">★★★★★</div>
-
-<p>
-“They all did a fantastic job for my Haldi and Wedding makeup. Very helpful and listened to what I wanted.”
-</p>
-
-<div class="reviewer">
-<strong>Emi B</strong>
-<span>Customer Review</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- LOCATION -->
-
-<section class="location" id="contact">
-
-<div class="container">
-
-<div class="center reveal">
-
-<div class="label">Visit Us</div>
-
-<h2 class="title">
-Come See<br>
-<span>The Glam.</span>
-</h2>
-
-<p class="desc">
-Located in the heart of Mahanagar, Lucknow.
-</p>
-
-</div>
-
-
-<div class="location-grid">
-
-<div class="location-card reveal">
-
-<h3>
-Glitters & Glam-Pro Makeup Studio & Beauty Salon
-</h3>
-
-<p>
-Parza Plaza, M-8,<br>
-Near Happy Home,<br>
-Gole Market, Mahanagar,<br>
-Lucknow, Uttar Pradesh 226006
-</p>
-
-
-<div class="contact-row">
-
-<strong>Phone</strong>
-
-<a href="tel:09335936670">
-093359 36670
-</a>
-
-</div>
-
-
-<div class="contact-row">
-
-<strong>Hours</strong>
-
-<p>
-Closed · Opens 10:30 AM
-</p>
-
-</div>
-
-
-<br>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=Glitters+and+Glam-Pro+Makeup+Studio+Beauty+Salon+Parza+Plaza+Mahanagar+Lucknow"
-target="_blank"
-class="btn btn-gold"
->
-Get Directions →
-</a>
-
-</div>
-
-
-<div class="map reveal">
-
-<div>
-
-<div class="map-pin">⌖</div>
-
-<h3>Mahanagar, Lucknow</h3>
-
-<p style="color:#ccc;margin:10px 0 22px;">
-Parza Plaza · Gole Market
-</p>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=Glitters+and+Glam-Pro+Makeup+Studio+Beauty+Salon+Parza+Plaza+Mahanagar+Lucknow"
-target="_blank"
-class="btn btn-light"
->
-Open Google Maps
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
@@ -1709,296 +1352,155 @@ Open Google Maps
 
 <section class="cta">
 
-<div class="container reveal">
+  <div class="container">
 
-<div class="label">Your Beauty Journey Starts Here</div>
+    <div class="section-kicker">
+      Your Next Look Awaits
+    </div>
 
-<h2>
-Let's Create<br>
-Your <span>Perfect Look.</span>
-</h2>
+    <h2>
+      Find something<br>
+      uniquely yours.
+    </h2>
 
-<p>
-Appointments, bridal enquiries and beauty consultations.
-</p>
+    <p>
+      Message VASTRA for prices, sizes,
+      availability and the latest collection.
+    </p>
 
-<a href="#" onclick="openModal();return false;" class="btn btn-gold">
-Book Your Appointment →
-</a>
+    <a class="btn"
+       href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20see%20your%20latest%20collection."
+       target="_blank">
+      Chat On WhatsApp
+    </a>
 
-</div>
+  </div>
 
 </section>
+
+
+<!-- CONTACT -->
+
+<section class="contact container" id="contact">
+
+  <div class="contact-grid">
+
+    <div>
+
+      <div class="section-kicker">
+        Visit VASTRA
+      </div>
+
+      <h2>
+        Come discover
+        your style.
+      </h2>
+
+      <p class="contact-intro">
+        For collection details, prices, sizes
+        and availability, contact VASTRA
+        directly.
+      </p>
+
+      <div class="details">
+
+        <div class="detail">
+          <span>Phone / WhatsApp</span>
+          <strong>8840311403</strong>
+        </div>
+
+        <div class="detail">
+          <span>Store</span>
+          <strong>VASTRA Collection</strong>
+        </div>
+
+        <div class="detail">
+          <span>Address</span>
+          <strong>
+            Tarnanganj, Kalpi, Near Bank of Baroda
+          </strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="section-kicker">
+        Direct Enquiry
+      </div>
+
+      <h3>
+        Looking for something special?
+      </h3>
+
+      <p>
+        Send us a message and ask about
+        our latest designs, sizes and prices.
+      </p>
+
+      <a class="btn btn-dark"
+         href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20would%20like%20to%20know%20about%20your%20collection."
+         target="_blank">
+        WhatsApp VASTRA
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-<div class="container">
+  <div class="container">
 
-<div class="footer-grid">
+    <div class="footer-top">
 
-<div class="footer-brand">
+      <div class="footer-logo">
+        VASTRA
+      </div>
 
-<div class="logo">
-Glitters <span>& Glam</span>
-</div>
+      <p>
+        Premium Indian wear curated for
+        elegant everyday moments and
+        unforgettable celebrations.
+      </p>
 
-<p>
-Pro Makeup Studio & Beauty Salon in Mahanagar, Lucknow.
-Beauty, styling and professional care under one roof.
-</p>
+    </div>
 
-</div>
+    <div class="footer-bottom">
 
+      <span>
+        © 2026 VASTRA COLLECTION
+      </span>
 
-<div class="footer">
+      <span>
+        TARNANGANJ • KALPI
+      </span>
 
-<h4>Explore</h4>
+    </div>
 
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#bridal">Bridal</a>
-<a href="#gallery">Gallery</a>
-<a href="#reviews">Reviews</a>
-
-</div>
-
-
-<div class="footer">
-
-<h4>Contact</h4>
-
-<p>Mahanagar, Lucknow</p>
-<p>Parza Plaza, M-8</p>
-<p>093359 36670</p>
-<p>Opens 10:30 AM</p>
-
-</div>
-
-</div>
-
-
-<div class="copyright">
-© 2026 Glitters & Glam-Pro Makeup Studio & Beauty Salon. All Rights Reserved.
-</div>
-
-</div>
+  </div>
 
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- FLOATING WHATSAPP -->
 
-<a
-href="https://wa.me/919335936670"
-target="_blank"
-class="whatsapp"
-aria-label="WhatsApp"
->
-
-<svg viewBox="0 0 24 24">
-<path d="M20.52 3.48A11.78 11.78 0 0012.13 0C5.62 0 .33 5.29.33 11.8c0 2.08.54 4.11 1.56 5.9L.23 24l6.45-1.69a11.78 11.78 0 005.45 1.35h.01c6.51 0 11.8-5.29 11.8-11.8 0-3.15-1.23-6.11-3.42-8.38zM12.14 21.7h-.01a9.84 9.84 0 01-5.02-1.37l-.36-.21-3.83 1 1.02-3.73-.23-.38a9.84 9.84 0 01-1.51-5.21c0-5.43 4.42-9.85 9.85-9.85 2.63 0 5.1 1.03 6.96 2.89a9.8 9.8 0 012.89 6.96c0 5.43-4.42 9.85-9.85 9.85zm5.4-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
-</svg>
-
+<a class="whatsapp"
+   href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20know%20more%20about%20your%20collection."
+   target="_blank"
+   aria-label="Chat with VASTRA on WhatsApp">
+  WA
 </a>
-
-
-<!-- MODAL -->
-
-<div class="modal" id="modal">
-
-<div class="modal-box">
-
-<div class="close" onclick="closeModal()">×</div>
-
-<h2>
-Book Your <span style="color:var(--gold)">Appointment</span>
-</h2>
-
-<form id="bookingForm">
-
-<div class="input">
-<label>YOUR NAME</label>
-<input id="name" type="text" placeholder="Enter your name" required>
-</div>
-
-<div class="input">
-<label>PHONE NUMBER</label>
-<input id="phone" type="tel" placeholder="Enter phone number" required>
-</div>
-
-<div class="input">
-<label>SERVICE</label>
-
-<select id="service" required>
-
-<option value="">Select a service</option>
-<option>Bridal Makeup</option>
-<option>Party Makeup</option>
-<option>Hair Styling</option>
-<option>Hair Spa</option>
-<option>Beauty Care</option>
-<option>Complete Glam</option>
-<option>Other Enquiry</option>
-
-</select>
-
-</div>
-
-<div class="input">
-<label>MESSAGE</label>
-<textarea id="message" placeholder="Preferred date / time / details"></textarea>
-</div>
-
-<button class="btn btn-gold" type="submit" style="width:100%;border:0;cursor:pointer;">
-Send Enquiry on WhatsApp →
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-
-<script>
-
-/* LOADER */
-
-window.addEventListener("load",function(){
-
-setTimeout(function(){
-
-document.getElementById("loader").classList.add("hide");
-
-},800);
-
-});
-
-
-/* HEADER */
-
-window.addEventListener("scroll",function(){
-
-const header=document.getElementById("header");
-
-if(window.scrollY>40){
-header.classList.add("scrolled");
-}else{
-header.classList.remove("scrolled");
-}
-
-});
-
-
-/* MOBILE MENU */
-
-function toggleMenu(){
-
-document.getElementById("navLinks").classList.toggle("active");
-
-}
-
-
-/* MODAL */
-
-function openModal(){
-
-document.getElementById("modal").classList.add("active");
-
-}
-
-function closeModal(){
-
-document.getElementById("modal").classList.remove("active");
-
-}
-
-document.getElementById("modal").addEventListener("click",function(e){
-
-if(e.target===this){
-closeModal();
-}
-
-});
-
-
-/* WHATSAPP BOOKING */
-
-document.getElementById("bookingForm").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const name=document.getElementById("name").value.trim();
-const phone=document.getElementById("phone").value.trim();
-const service=document.getElementById("service").value;
-const message=document.getElementById("message").value.trim();
-
-const studioNumber="919335936670";
-
-const text=
-"Hello Glitters & Glam,%0A%0A"+
-"*Appointment Enquiry*%0A"+
-"Name: "+encodeURIComponent(name)+"%0A"+
-"Phone: "+encodeURIComponent(phone)+"%0A"+
-"Service: "+encodeURIComponent(service)+"%0A"+
-"Message: "+encodeURIComponent(message);
-
-window.open(
-"https://wa.me/"+studioNumber+"?text="+text,
-"_blank"
-);
-
-});
-
-
-/* SCROLL REVEAL */
-
-const observer=new IntersectionObserver(
-
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},
-
-{
-threshold:.12
-}
-
-);
-
-document.querySelectorAll(".reveal").forEach(el=>{
-
-observer.observe(el);
-
-});
-
-
-/* CLOSE MOBILE MENU */
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-link.addEventListener("click",function(){
-
-document.getElementById("navLinks").classList.remove("active");
-
-});
-
-});
-
-</script>
 
 </body>
 </html>
