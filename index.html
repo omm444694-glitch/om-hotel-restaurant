@@ -4,23 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VASTRA | Premium Indian Wear</title>
+<title>VASTRA Collection | Premium Indian Wear</title>
 
-<meta name="description" content="VASTRA Collection — Premium Indian ethnic wear in Tarnanganj, Kalpi. Explore elegant Indian wear and enquire directly on WhatsApp.">
+<meta name="description"
+content="VASTRA Collection — Elegant Indian wear in Tarnanganj, Kalpi. Discover our latest collection and enquire on WhatsApp.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
-  --cream:#f7f2ea;
-  --paper:#fffdf9;
+  --bg:#f7f2eb;
+  --cream:#eee3d5;
+  --white:#fffdf9;
   --dark:#211b18;
-  --muted:#756b63;
-  --brown:#7d4935;
-  --line:#ded4c9;
-  --gold:#b08a55;
+  --brown:#814936;
+  --gold:#b39464;
+  --muted:#756c64;
+  --line:#ded3c7;
 }
 
 *{
@@ -34,15 +38,15 @@ html{
 }
 
 body{
-  background:var(--cream);
+  background:var(--bg);
   color:var(--dark);
   font-family:"DM Sans",Arial,sans-serif;
   line-height:1.6;
 }
 
 a{
-  color:inherit;
   text-decoration:none;
+  color:inherit;
 }
 
 img{
@@ -59,26 +63,26 @@ img{
 
 .topbar{
   background:var(--dark);
-  color:#eee5da;
+  color:#e8ddd2;
   text-align:center;
-  padding:9px 15px;
-  font-size:11px;
-  letter-spacing:2px;
+  padding:9px;
+  font-size:10px;
+  letter-spacing:2.5px;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 header{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:rgba(247,242,234,.94);
-  backdrop-filter:blur(15px);
+  z-index:999;
+  background:rgba(247,242,235,.95);
+  backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(33,27,24,.1);
 }
 
 .nav{
-  min-height:76px;
+  height:78px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -86,49 +90,38 @@ header{
 
 .logo{
   font-family:"Cormorant Garamond",serif;
-  font-size:35px;
+  font-size:36px;
   font-weight:600;
-  letter-spacing:8px;
+  letter-spacing:7px;
 }
 
 .nav-links{
   display:flex;
-  gap:34px;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-}
-
-.nav-links a{
-  position:relative;
-}
-
-.nav-links a:after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-7px;
-  width:0;
-  height:1px;
-  background:var(--brown);
-  transition:.3s;
-}
-
-.nav-links a:hover:after{
-  width:100%;
-}
-
-.nav-cta{
-  background:var(--dark);
-  color:white;
-  padding:12px 20px;
+  gap:30px;
   font-size:11px;
   letter-spacing:1.5px;
   text-transform:uppercase;
+}
+
+.nav-links a{
   transition:.3s;
 }
 
-.nav-cta:hover{
+.nav-links a:hover{
+  color:var(--brown);
+}
+
+.nav-btn{
+  background:var(--dark);
+  color:white;
+  padding:12px 20px;
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.nav-btn:hover{
   background:var(--brown);
 }
 
@@ -137,46 +130,42 @@ header{
 .hero{
   min-height:calc(100vh - 120px);
   display:grid;
-  grid-template-columns:43% 57%;
+  grid-template-columns:44% 56%;
   align-items:center;
   gap:50px;
-  padding:55px 0 75px;
-}
-
-.hero-copy{
-  padding-right:20px;
+  padding:60px 0 80px;
 }
 
 .eyebrow{
   color:var(--brown);
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:11px;
+  font-size:10px;
   font-weight:600;
+  letter-spacing:4px;
+  text-transform:uppercase;
 }
 
 .hero h1{
   font-family:"Cormorant Garamond",serif;
-  font-size:clamp(65px,8vw,112px);
+  font-size:clamp(68px,8vw,112px);
   font-weight:400;
   line-height:.82;
   letter-spacing:-3px;
-  margin:24px 0 28px;
+  margin:25px 0;
 }
 
-.hero h1 span{
-  font-style:italic;
+.hero h1 em{
+  color:var(--brown);
 }
 
-.hero-description{
-  max-width:470px;
+.hero p{
   color:var(--muted);
-  font-size:15px;
-  line-height:1.9;
-  margin-bottom:35px;
+  max-width:460px;
+  font-size:14px;
+  line-height:2;
+  margin-bottom:32px;
 }
 
-.hero-buttons{
+.buttons{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
@@ -187,10 +176,10 @@ header{
   align-items:center;
   justify-content:center;
   min-height:48px;
-  padding:0 24px;
-  font-size:11px;
+  padding:0 23px;
+  font-size:10px;
   font-weight:600;
-  letter-spacing:1.6px;
+  letter-spacing:1.5px;
   text-transform:uppercase;
   transition:.3s;
 }
@@ -205,20 +194,20 @@ header{
   transform:translateY(-2px);
 }
 
-.btn-light{
+.btn-outline{
   border:1px solid var(--dark);
 }
 
-.btn-light:hover{
+.btn-outline:hover{
   background:var(--dark);
   color:white;
 }
 
-.hero-visual{
+.hero-image{
   position:relative;
 }
 
-.hero-visual:before{
+.hero-image:before{
   content:"";
   position:absolute;
   inset:18px -18px -18px 18px;
@@ -226,216 +215,157 @@ header{
   z-index:-1;
 }
 
-.hero-visual img{
-  height:680px;
+.hero-image img{
+  height:650px;
   object-fit:cover;
 }
 
-.hero-badge{
+.hero-card{
   position:absolute;
-  bottom:24px;
   left:24px;
-  background:rgba(255,253,249,.94);
+  bottom:24px;
+  background:rgba(255,253,249,.95);
   padding:17px 20px;
-  min-width:190px;
 }
 
-.hero-badge strong{
+.hero-card strong{
   display:block;
   font-family:"Cormorant Garamond",serif;
-  font-size:22px;
+  font-size:23px;
   font-weight:500;
 }
 
-.hero-badge small{
+.hero-card span{
   font-size:9px;
   letter-spacing:2px;
   color:var(--muted);
 }
 
-/* INTRO */
+/* ABOUT */
 
-.intro{
+.about{
   background:var(--dark);
   color:white;
-  padding:105px 0;
+  padding:100px 0;
 }
 
-.intro-grid{
+.about-grid{
   display:grid;
-  grid-template-columns:1fr 1.7fr;
+  grid-template-columns:1fr 2fr;
   gap:70px;
-  align-items:start;
 }
 
-.intro-label{
-  color:#caa878;
+.kicker{
+  color:var(--gold);
   font-size:10px;
   letter-spacing:4px;
   text-transform:uppercase;
 }
 
-.intro h2{
+.about h2{
   font-family:"Cormorant Garamond",serif;
+  font-size:clamp(45px,6vw,72px);
   font-weight:400;
-  font-size:clamp(42px,5vw,68px);
-  line-height:1;
-  max-width:700px;
+  line-height:.95;
 }
 
-.intro p{
-  color:#c9c0b7;
-  font-size:16px;
+.about p{
+  color:#c8bdb4;
+  font-size:15px;
   line-height:2;
-  margin-top:25px;
-  max-width:680px;
+  max-width:700px;
+  margin-top:24px;
 }
 
-/* CATEGORY */
+/* COLLECTION HEADER */
 
-.categories{
-  padding:110px 0 75px;
+.collection{
+  padding:105px 0;
 }
 
 .section-head{
   display:flex;
   justify-content:space-between;
   align-items:end;
-  gap:30px;
   margin-bottom:42px;
-}
-
-.section-kicker{
-  color:var(--brown);
-  font-size:10px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  font-weight:600;
+  gap:25px;
 }
 
 .section-title{
   font-family:"Cormorant Garamond",serif;
+  font-size:60px;
   font-weight:400;
-  font-size:58px;
   line-height:1;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 .section-note{
   color:var(--muted);
-  font-size:12px;
+  font-size:11px;
   max-width:250px;
 }
 
-.category-grid{
+/* PRODUCTS */
+
+.products{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.category{
-  position:relative;
-  height:400px;
-  overflow:hidden;
-}
-
-.category img{
-  height:100%;
-  object-fit:cover;
-  transition:transform .7s;
-}
-
-.category:hover img{
-  transform:scale(1.05);
-}
-
-.category-overlay{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:flex-end;
-  padding:25px;
-  background:linear-gradient(transparent 40%,rgba(0,0,0,.68));
-  color:white;
-}
-
-.category-overlay h3{
-  font-family:"Cormorant Garamond",serif;
-  font-size:32px;
-  font-weight:400;
-}
-
-.category-overlay p{
-  font-size:10px;
-  letter-spacing:1.5px;
-  opacity:.8;
-}
-
-/* COLLECTION */
-
-.collection{
-  padding:75px 0 115px;
-}
-
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
+  gap:24px;
 }
 
 .product{
-  background:var(--paper);
-  border:1px solid #e7ddd2;
+  background:var(--white);
+  border:1px solid #e4d9ce;
   transition:.35s;
 }
 
 .product:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 50px rgba(50,35,25,.1);
+  transform:translateY(-7px);
+  box-shadow:0 20px 45px rgba(45,30,20,.12);
 }
 
 .product-image{
   height:470px;
   overflow:hidden;
-  background:#e7ded4;
+  background:#e6ddd4;
 }
 
 .product-image img{
   height:100%;
   object-fit:cover;
-  transition:transform .6s;
+  transition:.6s;
 }
 
-.product:hover .product-image img{
+.product:hover img{
   transform:scale(1.04);
 }
 
 .product-info{
-  padding:22px;
+  padding:21px;
 }
 
-.product-number{
+.product-no{
   color:var(--brown);
   font-size:9px;
   letter-spacing:2px;
 }
 
-.product-info h3{
+.product h3{
   font-family:"Cormorant Garamond",serif;
   font-size:27px;
   font-weight:500;
-  margin:5px 0;
+  margin:4px 0;
 }
 
-.product-info p{
+.product p{
   color:var(--muted);
   font-size:11px;
-  margin-bottom:18px;
+  margin-bottom:17px;
 }
 
-.product-link{
+.enquire{
   color:var(--brown);
-  font-size:10px;
+  font-size:9px;
   font-weight:600;
   letter-spacing:2px;
 }
@@ -443,19 +373,15 @@ header{
 /* FEATURE */
 
 .feature{
-  background:#e9dfd3;
-  padding:110px 0;
+  background:var(--cream);
+  padding:105px 0;
 }
 
 .feature-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:80px;
+  gap:75px;
   align-items:center;
-}
-
-.feature-image{
-  position:relative;
 }
 
 .feature-image img{
@@ -465,33 +391,35 @@ header{
 
 .feature-copy h2{
   font-family:"Cormorant Garamond",serif;
-  font-weight:400;
   font-size:70px;
-  line-height:.95;
+  font-weight:400;
+  line-height:.9;
   margin:17px 0 25px;
 }
 
 .feature-copy p{
   color:var(--muted);
-  max-width:500px;
+  font-size:14px;
   line-height:2;
+  max-width:500px;
   margin-bottom:30px;
 }
 
-/* WHY */
+/* SERVICES */
 
-.why{
-  padding:110px 0;
-  background:var(--paper);
+.services{
+  background:var(--white);
+  padding:100px 0;
 }
 
-.why-head{
+.services-head{
   text-align:center;
   max-width:700px;
-  margin:0 auto 55px;
+  margin:auto;
+  margin-bottom:55px;
 }
 
-.why-head h2{
+.services-head h2{
   font-family:"Cormorant Garamond",serif;
   font-size:58px;
   font-weight:400;
@@ -499,112 +427,98 @@ header{
   margin-top:12px;
 }
 
-.why-grid{
+.service-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
 }
 
-.why-item{
+.service{
   text-align:center;
-  padding:38px 22px;
+  padding:40px 25px;
   border-right:1px solid var(--line);
 }
 
-.why-item:last-child{
+.service:last-child{
   border-right:0;
 }
 
-.why-icon{
-  font-family:"Cormorant Garamond",serif;
+.service-number{
   color:var(--brown);
+  font-family:"Cormorant Garamond",serif;
   font-size:34px;
 }
 
-.why-item h3{
+.service h3{
   font-family:"Cormorant Garamond",serif;
-  font-size:25px;
+  font-size:27px;
   font-weight:500;
-  margin:8px 0;
 }
 
-.why-item p{
+.service p{
   color:var(--muted);
   font-size:11px;
+  margin-top:7px;
 }
 
 /* CTA */
 
 .cta{
-  padding:115px 0;
   background:var(--dark);
   color:white;
   text-align:center;
-}
-
-.cta .section-kicker{
-  color:#caa878;
+  padding:110px 0;
 }
 
 .cta h2{
   font-family:"Cormorant Garamond",serif;
   font-size:72px;
   font-weight:400;
-  line-height:.95;
+  line-height:.92;
   margin:15px 0 20px;
 }
 
 .cta p{
-  color:#c8bfb6;
+  color:#c8beb6;
   max-width:520px;
-  margin:0 auto 32px;
-  font-size:14px;
-}
-
-.cta .btn{
-  background:white;
-  color:var(--dark);
-}
-
-.cta .btn:hover{
-  background:#eadfd2;
+  margin:0 auto 30px;
+  font-size:13px;
 }
 
 /* CONTACT */
 
 .contact{
-  padding:110px 0;
+  padding:105px 0;
 }
 
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
+  gap:70px;
 }
 
 .contact h2{
   font-family:"Cormorant Garamond",serif;
   font-size:65px;
   font-weight:400;
-  line-height:.95;
+  line-height:.9;
   margin:15px 0 20px;
 }
 
 .contact-intro{
   color:var(--muted);
   max-width:480px;
+  font-size:14px;
 }
 
 .details{
   margin-top:35px;
-  display:grid;
-  gap:22px;
 }
 
 .detail{
   border-top:1px solid var(--line);
-  padding-top:16px;
+  padding:17px 0;
 }
 
 .detail span{
@@ -613,30 +527,29 @@ header{
   font-size:9px;
   letter-spacing:2px;
   text-transform:uppercase;
-  margin-bottom:5px;
 }
 
 .detail strong{
-  font-size:14px;
+  font-size:13px;
   font-weight:500;
 }
 
-.contact-card{
-  background:#e9dfd3;
+.contact-box{
+  background:var(--cream);
   padding:45px;
+  min-height:370px;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  min-height:380px;
 }
 
-.contact-card h3{
+.contact-box h3{
   font-family:"Cormorant Garamond",serif;
   font-size:40px;
   font-weight:400;
 }
 
-.contact-card p{
+.contact-box p{
   color:var(--muted);
   font-size:13px;
   margin:12px 0 25px;
@@ -645,8 +558,8 @@ header{
 /* FOOTER */
 
 footer{
-  background:#171311;
-  color:#cfc5bc;
+  background:#15110f;
+  color:#bfb5ad;
   padding:45px 0 25px;
 }
 
@@ -654,8 +567,8 @@ footer{
   display:flex;
   justify-content:space-between;
   gap:30px;
-  padding-bottom:35px;
-  border-bottom:1px solid #382f2a;
+  padding-bottom:30px;
+  border-bottom:1px solid #332b27;
 }
 
 .footer-logo{
@@ -666,17 +579,17 @@ footer{
 }
 
 .footer-top p{
-  font-size:11px;
-  max-width:300px;
+  font-size:10px;
+  max-width:310px;
 }
 
 .footer-bottom{
-  padding-top:20px;
   display:flex;
   justify-content:space-between;
+  padding-top:20px;
   font-size:9px;
   letter-spacing:1px;
-  color:#887d74;
+  color:#766b63;
 }
 
 /* WHATSAPP */
@@ -686,17 +599,17 @@ footer{
   right:22px;
   bottom:22px;
   z-index:2000;
-  width:62px;
-  height:62px;
+  width:60px;
+  height:60px;
   border-radius:50%;
-  background:#25d366;
+  background:#25D366;
   color:white;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:12px;
+  font-size:11px;
   font-weight:700;
-  box-shadow:0 8px 30px rgba(0,0,0,.22);
+  box-shadow:0 8px 25px rgba(0,0,0,.22);
   transition:.3s;
 }
 
@@ -704,7 +617,7 @@ footer{
   transform:scale(1.08);
 }
 
-/* MOBILE */
+/* TABLET */
 
 @media(max-width:850px){
 
@@ -712,101 +625,81 @@ footer{
     display:none;
   }
 
-  .nav{
-    min-height:68px;
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:45px;
   }
 
-  .nav-cta{
+  .hero h1{
+    font-size:75px;
+  }
+
+  .hero-image img{
+    height:560px;
+  }
+
+  .about-grid,
+  .feature-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .products{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .service{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .service:last-child{
+    border-bottom:0;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:550px){
+
+  .container{
+    width:90%;
+  }
+
+  .logo{
+    font-size:29px;
+    letter-spacing:5px;
+  }
+
+  .nav-btn{
     padding:10px 13px;
   }
 
   .hero{
-    grid-template-columns:1fr;
-    padding:45px 0 65px;
-  }
-
-  .hero-copy{
-    padding-right:0;
+    padding:45px 0 70px;
   }
 
   .hero h1{
-    font-size:70px;
+    font-size:62px;
   }
 
-  .hero-visual img{
-    height:540px;
-  }
-
-  .intro-grid,
-  .feature-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .category-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .product-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .why-item:nth-child(2){
-    border-right:0;
-  }
-
-  .why-item:nth-child(-n+2){
-    border-bottom:1px solid var(--line);
-  }
-
-  .feature-image img{
-    height:500px;
-  }
-}
-
-@media(max-width:550px){
-
-  .logo{
-    font-size:27px;
-    letter-spacing:5px;
-  }
-
-  .topbar{
-    font-size:8px;
-    letter-spacing:1.3px;
-  }
-
-  .hero{
-    min-height:auto;
-  }
-
-  .hero h1{
-    font-size:61px;
-    letter-spacing:-2px;
-  }
-
-  .hero-description{
-    font-size:13px;
-  }
-
-  .hero-visual:before{
+  .hero-image:before{
     inset:10px -10px -10px 10px;
   }
 
-  .hero-visual img{
+  .hero-image img{
     height:470px;
   }
 
-  .intro,
-  .categories,
+  .about,
   .collection,
   .feature,
-  .why,
+  .services,
   .cta,
   .contact{
     padding-top:75px;
@@ -818,41 +711,19 @@ footer{
   }
 
   .section-title{
-    font-size:48px;
+    font-size:49px;
   }
 
-  .section-note{
-    margin-top:15px;
-  }
-
-  .category-grid,
-  .product-grid{
+  .products{
     grid-template-columns:1fr;
   }
 
-  .category{
-    height:430px;
-  }
-
   .product-image{
-    height:480px;
+    height:490px;
   }
 
   .feature-copy h2{
     font-size:54px;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-  .why-item{
-    border-right:0;
-    border-bottom:1px solid var(--line);
-  }
-
-  .why-item:last-child{
-    border-bottom:0;
   }
 
   .cta h2{
@@ -860,10 +731,10 @@ footer{
   }
 
   .contact h2{
-    font-size:53px;
+    font-size:54px;
   }
 
-  .contact-card{
+  .contact-box{
     padding:30px;
   }
 
@@ -878,82 +749,104 @@ footer{
     right:16px;
     bottom:16px;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- TOP BAR -->
+
 <div class="topbar">
-  PREMIUM INDIAN WEAR • TARNANGANJ, KALPI
+  PREMIUM INDIAN WEAR • TARNANGANJ • KALPI
 </div>
 
+
+<!-- NAVBAR -->
+
 <header>
-  <nav class="nav container">
 
-    <a href="#home" class="logo">VASTRA</a>
+<nav class="nav container">
 
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#collection">Collection</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <a href="#home" class="logo">
+    VASTRA
+  </a>
 
-    <a class="nav-cta"
-       href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20know%20about%20your%20collection."
-       target="_blank">
-      WhatsApp
-    </a>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#collection">Collection</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-  </nav>
+  <a
+    href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20know%20about%20your%20collection."
+    target="_blank"
+    class="nav-btn">
+    WhatsApp
+  </a>
+
+</nav>
+
 </header>
 
+
 <main id="home">
+
 
 <!-- HERO -->
 
 <section class="hero container">
 
-  <div class="hero-copy">
+  <div>
 
-    <div class="eyebrow">The New Indian Edit</div>
+    <div class="eyebrow">
+      The New Indian Edit
+    </div>
 
     <h1>
-      Wear<br>
-      <span>your</span><br>
-      story.
+      Elegance<br>
+      in <em>every</em><br>
+      thread.
     </h1>
 
-    <p class="hero-description">
-      Discover elegant Indian wear curated for
-      celebrations, special moments and effortless
-      everyday style.
+    <p>
+      Discover thoughtfully selected Indian wear
+      for celebrations, special moments and
+      effortless everyday elegance.
     </p>
 
-    <div class="hero-buttons">
+    <div class="buttons">
 
       <a href="#collection" class="btn btn-dark">
         Explore Collection
       </a>
 
-      <a href="#contact" class="btn btn-light">
-        Visit Store
+      <a href="#contact" class="btn btn-outline">
+        Contact Us
       </a>
 
     </div>
 
   </div>
 
-  <div class="hero-visual">
 
-    <img src="images/1.jpg"
-         alt="VASTRA premium Indian wear">
+  <div class="hero-image">
 
-    <div class="hero-badge">
+    <img
+      src="images/1.jpg"
+      alt="VASTRA Indian fashion collection">
+
+    <div class="hero-card">
+
       <strong>VASTRA Collection</strong>
-      <small>TIMELESS • ELEGANT • INDIAN</small>
+
+      <span>
+        TIMELESS • ELEGANT • INDIAN
+      </span>
+
     </div>
 
   </div>
@@ -961,98 +854,36 @@ footer{
 </section>
 
 
-<!-- BRAND INTRO -->
+<!-- ABOUT -->
 
-<section class="intro" id="about">
+<section class="about" id="about">
 
-  <div class="container intro-grid">
+  <div class="container about-grid">
 
     <div>
-      <div class="intro-label">The VASTRA Story</div>
+
+      <div class="kicker">
+        Our Philosophy
+      </div>
+
     </div>
 
     <div>
+
       <h2>
-        Tradition with a
-        contemporary soul.
+        Tradition,
+        reimagined.
       </h2>
 
       <p>
         VASTRA brings together the beauty of
-        Indian fashion and a refined modern
-        aesthetic. From graceful everyday
-        silhouettes to festive looks, discover
-        pieces selected to make every occasion
-        feel special.
+        Indian fashion with a refined modern
+        aesthetic. Discover elegant silhouettes,
+        beautiful details and styles made for
+        moments worth remembering.
       </p>
+
     </div>
-
-  </div>
-
-</section>
-
-
-<!-- CATEGORIES -->
-
-<section class="categories container" id="categories">
-
-  <div class="section-head">
-
-    <div>
-      <div class="section-kicker">Explore</div>
-      <h2 class="section-title">Shop by mood.</h2>
-    </div>
-
-    <p class="section-note">
-      Find your next favourite look from
-      our curated Indian wear collection.
-    </p>
-
-  </div>
-
-  <div class="category-grid">
-
-    <a href="#collection" class="category">
-
-      <img src="images/2.jpg"
-           alt="VASTRA ethnic collection">
-
-      <div class="category-overlay">
-        <div>
-          <p>01 — COLLECTION</p>
-          <h3>Elegant Suits</h3>
-        </div>
-      </div>
-
-    </a>
-
-    <a href="#collection" class="category">
-
-      <img src="images/3.jpg"
-           alt="VASTRA festive wear">
-
-      <div class="category-overlay">
-        <div>
-          <p>02 — COLLECTION</p>
-          <h3>Festive Edit</h3>
-        </div>
-      </div>
-
-    </a>
-
-    <a href="#collection" class="category">
-
-      <img src="images/4.jpg"
-           alt="VASTRA traditional wear">
-
-      <div class="category-overlay">
-        <div>
-          <p>03 — COLLECTION</p>
-          <h3>Signature Looks</h3>
-        </div>
-      </div>
-
-    </a>
 
   </div>
 
@@ -1066,42 +897,59 @@ footer{
   <div class="section-head">
 
     <div>
-      <div class="section-kicker">Curated Collection</div>
-      <h2 class="section-title">Selected pieces.</h2>
+
+      <div class="kicker">
+        Curated For You
+      </div>
+
+      <h2 class="section-title">
+        The Collection
+      </h2>
+
     </div>
 
     <p class="section-note">
-      Prices and availability are available
-      directly through WhatsApp.
+      Prices, sizes and availability
+      available through WhatsApp.
     </p>
 
   </div>
 
 
-  <div class="product-grid">
+  <div class="products">
 
+
+    <!-- PRODUCT 1 -->
 
     <article class="product">
 
       <div class="product-image">
-        <img src="images/1.jpg"
-             alt="VASTRA Collection piece">
+
+        <img
+          src="images/1.jpg"
+          alt="VASTRA collection look 1">
+
       </div>
 
       <div class="product-info">
 
-        <div class="product-number">LOOK 01</div>
+        <div class="product-no">
+          LOOK 01
+        </div>
 
-        <h3>Signature Edit</h3>
+        <h3>
+          Signature Look
+        </h3>
 
         <p>
-          Elegant Indian wear • Ask for details
+          Discover this featured VASTRA look.
         </p>
 
-        <a class="product-link"
-           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2001."
-           target="_blank">
-          ENQUIRE ON WHATSAPP →
+        <a
+          class="enquire"
+          href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2001."
+          target="_blank">
+          ENQUIRE →
         </a>
 
       </div>
@@ -1109,27 +957,37 @@ footer{
     </article>
 
 
+    <!-- PRODUCT 2 -->
+
     <article class="product">
 
       <div class="product-image">
-        <img src="images/2.jpg"
-             alt="VASTRA suit collection">
+
+        <img
+          src="images/2.jpg"
+          alt="VASTRA collection look 2">
+
       </div>
 
       <div class="product-info">
 
-        <div class="product-number">LOOK 02</div>
+        <div class="product-no">
+          LOOK 02
+        </div>
 
-        <h3>Grace Edit</h3>
+        <h3>
+          Elegant Edit
+        </h3>
 
         <p>
-          Refined details • Elegant finish
+          A refined piece from our collection.
         </p>
 
-        <a class="product-link"
-           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2002."
-           target="_blank">
-          ENQUIRE ON WHATSAPP →
+        <a
+          class="enquire"
+          href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2002."
+          target="_blank">
+          ENQUIRE →
         </a>
 
       </div>
@@ -1137,27 +995,37 @@ footer{
     </article>
 
 
+    <!-- PRODUCT 3 -->
+
     <article class="product">
 
       <div class="product-image">
-        <img src="images/3.jpg"
-             alt="VASTRA festive collection">
+
+        <img
+          src="images/3.jpg"
+          alt="VASTRA collection look 3">
+
       </div>
 
       <div class="product-info">
 
-        <div class="product-number">LOOK 03</div>
+        <div class="product-no">
+          LOOK 03
+        </div>
 
-        <h3>Festive Edit</h3>
+        <h3>
+          Festive Edit
+        </h3>
 
         <p>
-          Designed for special occasions
+          Made for memorable occasions.
         </p>
 
-        <a class="product-link"
-           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2003."
-           target="_blank">
-          ENQUIRE ON WHATSAPP →
+        <a
+          class="enquire"
+          href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2003."
+          target="_blank">
+          ENQUIRE →
         </a>
 
       </div>
@@ -1165,27 +1033,37 @@ footer{
     </article>
 
 
+    <!-- PRODUCT 4 -->
+
     <article class="product">
 
       <div class="product-image">
-        <img src="images/4.jpg"
-             alt="VASTRA traditional outfit">
+
+        <img
+          src="images/4.jpg"
+          alt="VASTRA collection look 4">
+
       </div>
 
       <div class="product-info">
 
-        <div class="product-number">LOOK 04</div>
+        <div class="product-no">
+          LOOK 04
+        </div>
 
-        <h3>Heritage Edit</h3>
+        <h3>
+          Heritage Look
+        </h3>
 
         <p>
-          Timeless Indian elegance
+          Timeless Indian elegance.
         </p>
 
-        <a class="product-link"
-           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2004."
-           target="_blank">
-          ENQUIRE ON WHATSAPP →
+        <a
+          class="enquire"
+          href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2004."
+          target="_blank">
+          ENQUIRE →
         </a>
 
       </div>
@@ -1193,27 +1071,37 @@ footer{
     </article>
 
 
+    <!-- PRODUCT 5 -->
+
     <article class="product">
 
       <div class="product-image">
-        <img src="images/5.jpg"
-             alt="VASTRA latest collection">
+
+        <img
+          src="images/5.jpg"
+          alt="VASTRA collection look 5">
+
       </div>
 
       <div class="product-info">
 
-        <div class="product-number">LOOK 05</div>
+        <div class="product-no">
+          LOOK 05
+        </div>
 
-        <h3>New Arrival</h3>
+        <h3>
+          New Arrival
+        </h3>
 
         <p>
-          Latest collection • Enquire now
+          Explore our latest collection.
         </p>
 
-        <a class="product-link"
-           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2005."
-           target="_blank">
-          ENQUIRE ON WHATSAPP →
+        <a
+          class="enquire"
+          href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20am%20interested%20in%20Look%2005."
+          target="_blank">
+          ENQUIRE →
         </a>
 
       </div>
@@ -1221,27 +1109,37 @@ footer{
     </article>
 
 
+    <!-- PRODUCT 6 -->
+
     <article class="product">
 
       <div class="product-image">
-        <img src="images/1.jpg"
-             alt="VASTRA featured look">
+
+        <img
+          src="images/2.jpg"
+          alt="VASTRA featured collection">
+
       </div>
 
       <div class="product-info">
 
-        <div class="product-number">LOOK 06</div>
+        <div class="product-no">
+          LOOK 06
+        </div>
 
-        <h3>VASTRA Select</h3>
+        <h3>
+          VASTRA Select
+        </h3>
 
         <p>
-          Ask us about sizes and availability
+          Ask us for latest availability.
         </p>
 
-        <a class="product-link"
-           href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20please%20share%20details%20for%20Look%2006."
-           target="_blank">
-          ENQUIRE ON WHATSAPP →
+        <a
+          class="enquire"
+          href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20please%20share%20details%20for%20Look%2006."
+          target="_blank">
+          ENQUIRE →
         </a>
 
       </div>
@@ -1261,33 +1159,36 @@ footer{
 
     <div class="feature-image">
 
-      <img src="images/4.jpg"
-           alt="VASTRA festive Indian wear">
+      <img
+        src="images/4.jpg"
+        alt="VASTRA festive wear">
 
     </div>
 
+
     <div class="feature-copy">
 
-      <div class="section-kicker">
+      <div class="kicker">
         Made For Moments
       </div>
 
       <h2>
-        Dress for the
-        moments that matter.
+        Wear the
+        moment.
       </h2>
 
       <p>
-        Family celebrations, festive evenings,
-        special occasions or simply a day when
-        you want to feel your best — discover
-        Indian wear that fits the moment.
+        Whether it is a family celebration,
+        festive gathering or an elegant
+        everyday occasion, find a look that
+        feels naturally yours.
       </p>
 
-      <a class="btn btn-dark"
-         href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20please%20share%20your%20latest%20collection."
-         target="_blank">
-        Ask For Latest Collection
+      <a
+        href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20please%20share%20your%20latest%20collection."
+        target="_blank"
+        class="btn btn-dark">
+        Ask For Collection
       </a>
 
     </div>
@@ -1297,48 +1198,75 @@ footer{
 </section>
 
 
-<!-- WHY VASTRA -->
+<!-- SERVICES -->
 
-<section class="why">
+<section class="services">
 
   <div class="container">
 
-    <div class="why-head">
+    <div class="services-head">
 
-      <div class="section-kicker">
-        The VASTRA Difference
+      <div class="kicker">
+        The VASTRA Experience
       </div>
 
       <h2>
-        Chosen with intention.
+        Simple. Personal. Elegant.
       </h2>
 
     </div>
 
-    <div class="why-grid">
 
-      <div class="why-item">
-        <div class="why-icon">01</div>
-        <h3>Curated Style</h3>
-        <p>Thoughtfully selected Indian wear.</p>
+    <div class="service-grid">
+
+      <div class="service">
+
+        <div class="service-number">
+          01
+        </div>
+
+        <h3>
+          Curated Styles
+        </h3>
+
+        <p>
+          Thoughtfully selected Indian wear.
+        </p>
+
       </div>
 
-      <div class="why-item">
-        <div class="why-icon">02</div>
-        <h3>Elegant Details</h3>
-        <p>Looks made to stand out beautifully.</p>
+
+      <div class="service">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <h3>
+          Personal Enquiry
+        </h3>
+
+        <p>
+          Ask directly about sizes and prices.
+        </p>
+
       </div>
 
-      <div class="why-item">
-        <div class="why-icon">03</div>
-        <h3>Personal Service</h3>
-        <p>Ask directly about size and availability.</p>
-      </div>
 
-      <div class="why-item">
-        <div class="why-icon">04</div>
-        <h3>Local Boutique</h3>
-        <p>Visit us in Tarnanganj, Kalpi.</p>
+      <div class="service">
+
+        <div class="service-number">
+          03
+        </div>
+
+        <h3>
+          Local Boutique
+        </h3>
+
+        <p>
+          Visit us in Tarnanganj, Kalpi.
+        </p>
+
       </div>
 
     </div>
@@ -1354,7 +1282,7 @@ footer{
 
   <div class="container">
 
-    <div class="section-kicker">
+    <div class="kicker">
       Your Next Look Awaits
     </div>
 
@@ -1368,9 +1296,11 @@ footer{
       availability and the latest collection.
     </p>
 
-    <a class="btn"
-       href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20see%20your%20latest%20collection."
-       target="_blank">
+    <a
+      href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20see%20your%20latest%20collection."
+      target="_blank"
+      class="btn btn-outline"
+      style="border-color:white;color:white;">
       Chat On WhatsApp
     </a>
 
@@ -1385,9 +1315,10 @@ footer{
 
   <div class="contact-grid">
 
+
     <div>
 
-      <div class="section-kicker">
+      <div class="kicker">
         Visit VASTRA
       </div>
 
@@ -1397,28 +1328,50 @@ footer{
       </h2>
 
       <p class="contact-intro">
-        For collection details, prices, sizes
-        and availability, contact VASTRA
-        directly.
+        For collection details, prices,
+        sizes and availability, contact
+        VASTRA directly.
       </p>
+
 
       <div class="details">
 
         <div class="detail">
-          <span>Phone / WhatsApp</span>
-          <strong>8840311403</strong>
+
+          <span>
+            Phone / WhatsApp
+          </span>
+
+          <strong>
+            8840311403
+          </strong>
+
         </div>
 
-        <div class="detail">
-          <span>Store</span>
-          <strong>VASTRA Collection</strong>
-        </div>
 
         <div class="detail">
-          <span>Address</span>
+
+          <span>
+            Store
+          </span>
+
+          <strong>
+            VASTRA Collection
+          </strong>
+
+        </div>
+
+
+        <div class="detail">
+
+          <span>
+            Address
+          </span>
+
           <strong>
             Tarnanganj, Kalpi, Near Bank of Baroda
           </strong>
+
         </div>
 
       </div>
@@ -1426,9 +1379,9 @@ footer{
     </div>
 
 
-    <div class="contact-card">
+    <div class="contact-box">
 
-      <div class="section-kicker">
+      <div class="kicker">
         Direct Enquiry
       </div>
 
@@ -1437,13 +1390,14 @@ footer{
       </h3>
 
       <p>
-        Send us a message and ask about
-        our latest designs, sizes and prices.
+        Message us for the latest collection,
+        prices, sizes and availability.
       </p>
 
-      <a class="btn btn-dark"
-         href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20would%20like%20to%20know%20about%20your%20collection."
-         target="_blank">
+      <a
+        href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20would%20like%20to%20know%20about%20your%20collection."
+        target="_blank"
+        class="btn btn-dark">
         WhatsApp VASTRA
       </a>
 
@@ -1476,6 +1430,7 @@ footer{
 
     </div>
 
+
     <div class="footer-bottom">
 
       <span>
@@ -1495,10 +1450,11 @@ footer{
 
 <!-- FLOATING WHATSAPP -->
 
-<a class="whatsapp"
-   href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20know%20more%20about%20your%20collection."
-   target="_blank"
-   aria-label="Chat with VASTRA on WhatsApp">
+<a
+  class="whatsapp"
+  href="https://wa.me/918840311403?text=Hello%20VASTRA%2C%20I%20want%20to%20know%20more%20about%20your%20collection."
+  target="_blank"
+  aria-label="WhatsApp">
   WA
 </a>
 
